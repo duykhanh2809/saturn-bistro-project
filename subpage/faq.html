@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../sass/main.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
     <link rel="stylesheet" href="../css/page.css" />
     <script defer src="https://unpkg.com/phosphor-icons"></script>
     <script defer src="script.js"></script>
@@ -20,123 +20,122 @@
   <body>
     <header>
       <div class="container header">
-        <a href="../../index.html"
+        <a href="index.html"
           ><img
-            src="../img/logo/smile_fullsize.png"
+            src="../img/logo/smile_yellow.png"
             alt="the bistro's logo"
-            class="header-img"
+            class="header__img"
         /></a>
-        <div class="menu-btn"><span>Menu</span></div>
-        <nav class="header-nav">
-          <ul class="color-select">
+        <nav class="header__nav">
+          <ul class="header__color">
             <li>
-              <span class="color-item__black color-select__retro"></span>
-              <span class="color-name hidden">RetroYellow</span>
+              <span class="header__item header__color-retro"></span>
+              <span class="hidden">RetroYellow</span>
             </li>
             <li>
-              <span class="color-item__black color-select__vintage"></span>
-              <span class="color-name hidden">VintageSalmon</span>
+              <span class="header__item header__color-vintage"></span>
+              <span class="hidden">VintageSalmon</span>
             </li>
             <li>
-              <span class="color-item__black color-select__classic"></span>
-              <span class="color-name hidden">ClassicEcru</span>
+              <span class="header__item header__color-classic"></span>
+              <span class="hidden">ClassicEcru</span>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <div class="faq-container">
-        <div class="content">
-          <div class="item">
-            <div class="question">
+      <div class="faq">
+        <div class="faq__content">
+          <div class="faq__item">
+            <div class="faq__question">
               <p>Loại hình ẩm thực mà chúng tôi phục vụ</p>
               <i class="ph-plus"></i>
             </div>
-            <div class="answer">
+            <div class="faq__answer">
               Thực đơn của chúng tôi bao gồm một phần cố định và một thực đơn
               theo mùa (chúng tôi thay đổi mỗi tháng một lần). Chúng tôi nấu ăn
               một cách tận tâm, đơn giản, nhưng thú vị - sử dụng những gì mà mùa
               vụ mang lại cho chúng tôi.
             </div>
           </div>
-          <div class="item">
-            <div class="question">
+          <div class="faq__item">
+            <div class="faq__question">
               <p>
                 Ở quán có "happy hours" cho việc uống cocktails và rượu không?
               </p>
               <i class="ph-plus"></i>
             </div>
-            <div class="answer">
+            <div class="faq__answer">
               Chúng tôi có các ưu đãi đặc biệt - bạn có thể tìm thấy chúng trong
               phần menu nhé.
             </div>
           </div>
-          <div class="item">
-            <div class="question">
+          <div class="faq__item">
+            <div class="faq__question">
               <p>Thời gian hoạt động của quán?</p>
               <i class="ph-plus"></i>
             </div>
-            <div class="answer">
+            <div class="faq__answer">
               <p>Thứ Hai - Thứ Năm 14:00 - 22:00</p>
               <p>Thứ Sáu - Thứ Bảy 14:00 - 24:00</p>
               <p>Chủ Nhật 14:00 - 20:00</p>
             </div>
           </div>
-          <div class="item">
-            <div class="question">
+          <div class="faq__item">
+            <div class="faq__question">
               <p>Quán có thực đơn dành cho trẻ em không?</p>
               <i class="ph-plus"></i>
             </div>
-            <div class="answer">
+            <div class="faq__answer">
               Tất nhiên là có rồi. Bạn kiểm tra mục "FOR THE YOUNGESTS" trong
               regular menu nha.
             </div>
           </div>
-          <div class="item">
-            <div class="question">
+          <div class="faq__item">
+            <div class="faq__question">
               <p>Quán có phục vụ món sườn lợn vào những ngày nào?</p>
 
               <i class="ph-plus"></i>
             </div>
-            <div class="answer">
+            <div class="faq__answer">
               Từ thứ Hai đến thứ năm. Bạn có thể tìm thấy các ưu đãi đặc biệt
               khác trong phần menu nhé.
             </div>
           </div>
-          <div class="item">
-            <div class="question">
+          <div class="faq__item">
+            <div class="faq__question">
               <p>Có thể mang thú cưng đến quán không?</p>
               <i class="ph-plus"></i>
             </div>
-            <div class="answer">Tất nhiên là có rồi.</div>
+            <div class="faq__answer">Tất nhiên là có rồi.</div>
           </div>
         </div>
-        <div class="title">
+        <div class="faq__title">
           <h2 class="heading-secondary">FAQ</h2>
         </div>
       </div>
     </main>
     <footer>
       <div class="container footer">
-        <div class="footer-navigation">
-          <ul class="footer-options">
-            <li><a href="#" class="footer-navigation__list">thực đơn</a></li>
-            <li><a href="#" class="footer-navigation__list">rượu</a></li>
-            <li><a href="#" class="footer-navigation__list">ý tưởng</a></li>
-            <li><a href="#" class="footer-navigation__list">đặt bàn</a></li>
-            <li><a href="#" class="footer-navigation__list">FAQ</a></li>
-            <li><a href="#" class="footer-navigation__list">liên hệ</a></li>
+        <div class="footer__options">
+          <ul class="footer__nav">
+            <li><a href="#" class="footer__nav-list">thực đơn</a></li>
+            <li><a href="#" class="footer__nav-list">rượu</a></li>
+            <li><a href="#" class="footer__nav-list">ý tưởng</a></li>
+            <li><a href="#" class="footer__nav-list">đặt bàn</a></li>
+            <li><a href="#" class="footer__nav-list">FAQ</a></li>
+            <li><a href="#" class="footer__nav-list">liên hệ</a></li>
           </ul>
-          <div class="footer-scroll">
-            <p class="footer-scroll__text">Đầu trang</p>
-            <div class="footer-scroll__icon">
-              <i class="ph-arrow-up footer-icon"></i>
+          <div class="footer__scroll">
+            <p class="footer__scroll-text">Đầu trang</p>
+            <div class="footer__scroll-icon">
+              <i class="ph-arrow-up footer__icon"></i>
             </div>
           </div>
         </div>
-        <div class="footer-info">
-          <div class="footer-info__time">
+        <div class="footer__info">
+          <div class="footer__time">
             <div class="helper-flex">
               <span>Thứ 2 - Thứ 5</span>
               <span>14:00-22:00</span>
@@ -150,19 +149,21 @@
               <span>14:00-21:00</span>
             </div>
           </div>
-          <div class="footer-info__meta">
-            <a href="#" class="footer-info__link">Instagram</a>
-            <a href="#" class="footer-info__link">facebook</a>
+          <div class="footer__meta">
+            <a href="#" class="footer__link">Instagram</a>
+            <a href="#" class="footer__link">facebook</a>
           </div>
         </div>
-        <div class="footer-extra">
-          <div class="contact">
+        <div class="footer__extra">
+          <div class="footer__contact">
             <p>+ 0123456789 (VN)</p>
-            <a href="mailto:khanh.nguyenduy@hcmut.edu.com" class="contact-link"
+            <a
+              href="mailto:khanh.nguyenduy@hcmut.edu.com"
+              class="footer__contact-link"
               >khanh.nguyenduy@hcmut.edu.vn</a
             >
           </div>
-          <div class="conclude">
+          <div class="footer__conclude">
             Đây là trang web được lấy ý tưởng thiết kế từ
             https://punkt-gdynia.pl, website này được xây dựng và tinh chỉnh nội
             dung theo Nguyễn Duy Khánh - HCMUT.

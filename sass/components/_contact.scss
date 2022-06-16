@@ -1,0 +1,22 @@
+.contact {
+  display: flex;
+  gap: 10rem;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 8rem 12rem;
+  justify-content: space-between;
+
+  &__map {
+    flex: 0 0 50%;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__time {
+    margin-bottom: 3rem;
+  }
+}

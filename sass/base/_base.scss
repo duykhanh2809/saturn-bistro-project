@@ -6,6 +6,12 @@
   box-sizing: inherit;
 }
 
+:root {
+  --color-primary: #eee200;
+  --color-secondary: #f9d3a8;
+  --color-tertiary: #fffee6;
+}
+
 html {
   font-size: 62.5%;
 
@@ -25,7 +31,7 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
+  background-color: var(--color-primary);
 
   @include respond(tab-port) {
     // width < 900px
@@ -33,7 +39,24 @@ body {
   }
 }
 
+.container {
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+}
+
 ::selection {
   background-color: $color-primary;
   color: $color-white;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 68.6rem;
+  width: 100vw;
+  object-fit: cover;
+  display: block;
+  z-index: -2;
 }

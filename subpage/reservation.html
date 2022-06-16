@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../sass/main.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
     <link rel="stylesheet" href="../css/page.css" />
     <script defer src="https://unpkg.com/phosphor-icons"></script>
     <script defer src="script.js"></script>
@@ -20,34 +20,33 @@
   <body>
     <header>
       <div class="container header">
-        <a href="../../index.html"
+        <a href="index.html"
           ><img
-            src="../img/logo/smile_fullsize.png"
+            src="../img/logo/smile_yellow.png"
             alt="the bistro's logo"
-            class="header-img"
+            class="header__img"
         /></a>
-        <div class="menu-btn"><span>Menu</span></div>
-        <nav class="header-nav">
-          <ul class="color-select">
+        <nav class="header__nav">
+          <ul class="header__color">
             <li>
-              <span class="color-item__black color-select__retro"></span>
-              <span class="color-name hidden">RetroYellow</span>
+              <span class="header__item header__color-retro"></span>
+              <span class="hidden">RetroYellow</span>
             </li>
             <li>
-              <span class="color-item__black color-select__vintage"></span>
-              <span class="color-name hidden">VintageSalmon</span>
+              <span class="header__item header__color-vintage"></span>
+              <span class="hidden">VintageSalmon</span>
             </li>
             <li>
-              <span class="color-item__black color-select__classic"></span>
-              <span class="color-name hidden">ClassicEcru</span>
+              <span class="header__item header__color-classic"></span>
+              <span class="hidden">ClassicEcru</span>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <div class="max-container">
-        <div class="reservation-intro">
+      <div class="reservation">
+        <div class="reservation__intro">
           <p class="heading-middle">
             Saturn không chỉ là nơi tuyệt vời để ăn trưa, ăn tối mà còn là không
             gian hoàn hảo để tổ chức tiệc hoặc sự kiện đặc biệt. Chúng tôi sẽ tổ
@@ -60,16 +59,16 @@
             <h2 class="heading-secondary">đặt chỗ</h2>
           </div>
         </div>
-        <div class="reservation-detail">
-          <div class="reservation-detail__img">
+        <div class="reservation__detail">
+          <div class="reservation__detail-img">
             <img
               src="../../img/reservations1.jpg"
               alt="Wine"
-              class="reservation-img"
+              class="reservation__img"
             />
           </div>
-          <div class="reservation-detail__text">
-            <div class="text-box">
+          <div class="reservation__text">
+            <div class="reservation__box">
               <p>
                 Nếu bạn muốn đặt bàn với chúng tôi hoặc chỉ định một ưu đãi
                 riêng, vui lòng liên hệ với chúng tôi qua điện thoại hoặc email:
@@ -85,8 +84,8 @@
               </p>
 
               <em
-                >Đối với đặt chỗ trên 8 người , chúng tôi cộng thêm 10% dịch vụ
-                bồi bàn .</em
+                >Đối với đặt chỗ trên 8 người, chúng tôi cộng thêm 10% dịch vụ
+                bồi bàn.</em
               >
             </div>
             <p class="heading-bonus">
@@ -94,8 +93,8 @@
             </p>
           </div>
         </div>
-        <div class="reservation-sale">
-          <div class="reservation-sale__text">
+        <div class="reservation__sale">
+          <div class="reservation__sale-text">
             <p class="heading-middle">
               Chúng tôi không có một ưu đãi tiêu chuẩn nào cho việc đặt chỗ -
               chúng tôi điều chỉnh hình thức cuộc họp cho phù hợp với mong đợi
@@ -104,19 +103,19 @@
               bar và chăm sóc một bầu không khí thoải mái.
             </p>
 
-            <div class="text-box">
+            <div class="reservation__box">
               <p>
                 Bạn có thể tổ chức các sự kiện đặc biệt với chúng tôi - từ sinh
-                nhật , lễ rửa tội , tiệc tùng đến tiệc khiêu vũ với DJ hoặc nhạc
+                nhật, lễ rửa tội, tiệc tùng đến tiệc khiêu vũ với DJ hoặc nhạc
                 sống
               </p>
               <p>
                 Điểm cũng là nơi thích hợp cho các cuộc họp hoặc đào tạo của
-                công ty . Chúng tôi cung cấp một máy chiếu và một máy chiếu đa
-                phương tiện .
+                công ty. Chúng tôi cung cấp một máy chiếu và một máy chiếu đa
+                phương tiện.
               </p>
               <p>
-                Đến với chúng tôi, bạn có thể đặt bàn , một phần phòng hoặc toàn
+                Đến với chúng tôi, bạn có thể đặt bàn, một phần phòng hoặc toàn
                 bộ chỗ để sử dụng riêng.
               </p>
             </div>
@@ -125,7 +124,7 @@
             <img
               src="../../img/reservations2.jpg"
               alt="Wine"
-              class="reservation-img"
+              class="reservation__img"
             />
           </div>
         </div>
@@ -140,24 +139,24 @@
     </main>
     <footer>
       <div class="container footer">
-        <div class="footer-navigation">
-          <ul class="footer-options">
-            <li><a href="#" class="footer-navigation__list">thực đơn</a></li>
-            <li><a href="#" class="footer-navigation__list">rượu</a></li>
-            <li><a href="#" class="footer-navigation__list">ý tưởng</a></li>
-            <li><a href="#" class="footer-navigation__list">đặt bàn</a></li>
-            <li><a href="#" class="footer-navigation__list">FAQ</a></li>
-            <li><a href="#" class="footer-navigation__list">liên hệ</a></li>
+        <div class="footer__options">
+          <ul class="footer__nav">
+            <li><a href="#" class="footer__nav-list">thực đơn</a></li>
+            <li><a href="#" class="footer__nav-list">rượu</a></li>
+            <li><a href="#" class="footer__nav-list">ý tưởng</a></li>
+            <li><a href="#" class="footer__nav-list">đặt bàn</a></li>
+            <li><a href="#" class="footer__nav-list">FAQ</a></li>
+            <li><a href="#" class="footer__nav-list">liên hệ</a></li>
           </ul>
-          <div class="footer-scroll">
-            <p class="footer-scroll__text">Đầu trang</p>
-            <div class="footer-scroll__icon">
-              <i class="ph-arrow-up footer-icon"></i>
+          <div class="footer__scroll">
+            <p class="footer__scroll-text">Đầu trang</p>
+            <div class="footer__scroll-icon">
+              <i class="ph-arrow-up footer__icon"></i>
             </div>
           </div>
         </div>
-        <div class="footer-info">
-          <div class="footer-info__time">
+        <div class="footer__info">
+          <div class="footer__time">
             <div class="helper-flex">
               <span>Thứ 2 - Thứ 5</span>
               <span>14:00-22:00</span>
@@ -171,19 +170,21 @@
               <span>14:00-21:00</span>
             </div>
           </div>
-          <div class="footer-info__meta">
-            <a href="#" class="footer-info__link">Instagram</a>
-            <a href="#" class="footer-info__link">facebook</a>
+          <div class="footer__meta">
+            <a href="#" class="footer__link">Instagram</a>
+            <a href="#" class="footer__link">facebook</a>
           </div>
         </div>
-        <div class="footer-extra">
-          <div class="contact">
+        <div class="footer__extra">
+          <div class="footer__contact">
             <p>+ 0123456789 (VN)</p>
-            <a href="mailto:khanh.nguyenduy@hcmut.edu.com" class="contact-link"
+            <a
+              href="mailto:khanh.nguyenduy@hcmut.edu.com"
+              class="footer__contact-link"
               >khanh.nguyenduy@hcmut.edu.vn</a
             >
           </div>
-          <div class="conclude">
+          <div class="footer__conclude">
             Đây là trang web được lấy ý tưởng thiết kế từ
             https://punkt-gdynia.pl, website này được xây dựng và tinh chỉnh nội
             dung theo Nguyễn Duy Khánh - HCMUT.

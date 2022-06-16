@@ -1,3 +1,44 @@
+.helper-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 68.6rem;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+
+.copyright {
+  align-self: flex-end;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/***********************/
+
 .u-center-text {
   text-align: center !important;
 }
