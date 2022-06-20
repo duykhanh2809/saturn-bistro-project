@@ -10,14 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/menu.css" />
-    <style>
-      body {
-        background-color: #bac2c0;
-      }
-    </style>
+    <link rel="stylesheet" href="../sass/main.css" />
     <script defer src="https://unpkg.com/phosphor-icons"></script>
     <script defer src="script.js"></script>
     <title>Saturn Bistro</title>
@@ -25,25 +18,25 @@
   <body>
     <header>
       <div class="container header">
-        <a href="..\index.html"
+        <a href="../index.html"
           ><img
-            src="..\img\logo\smile_yellow.png"
+            src="../img/logo/smile_yellow.png"
             alt="the bistro's logo"
-            class="header-img"
+            class="header__img"
         /></a>
-        <nav class="header-nav">
-          <ul class="color-select">
+        <nav class="header__nav">
+          <ul class="header__color">
             <li>
-              <span class="color-item color-select__retro"></span>
-              <span class="color-name hidden">RetroYellow</span>
+              <span class="header__item header__color-retro"></span>
+              <span class="hidden">RetroYellow</span>
             </li>
             <li>
-              <span class="color-item color-select__vintage"></span>
-              <span class="color-name hidden">VintageSalmon</span>
+              <span class="header__item header__color-vintage"></span>
+              <span class="hidden">VintageSalmon</span>
             </li>
             <li>
-              <span class="color-item color-select__classic"></span>
-              <span class="color-name hidden">ClassicEcru</span>
+              <span class="header__item header__color-classic"></span>
+              <span class="hidden">ClassicEcru</span>
             </li>
           </ul>
         </nav>
@@ -60,21 +53,21 @@
               class="wine-img"
             />
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>ITINERA BRUT</h4>
                 <span>32$</span>
               </div>
               <p>PROSECCO, WŁOCHY |GLERA|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>MONTELVINI ROSE BRUT</h4>
                 <span>40$</span>
               </div>
               <p>PROSECCO, WŁOCHY |GLERA, PINOT NERO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>MONTELVINI SUPERIORE EXTRA DRY</h4>
                 <span>50$</span>
               </div>
@@ -82,21 +75,21 @@
             </div>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>TORELLO RESERVA BRUT</h4>
                 <span>60$</span>
               </div>
               <p>CORPINNAT, HISZPANIA |MACABEO, XARELLO, PARELLADA|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>GOST ART BRUT</h4>
                 <span>65$</span>
               </div>
               <p>LUBUSKIE, POLSKA |RIESLING|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>PERNET-LEBRUN RESERVE BRUT</h4>
                 <span>85$</span>
               </div>
@@ -106,7 +99,7 @@
           <div class="menu-second">
             <h3 class="heading-tertiary">ROSE</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>WINNICA TURNAU ROSE</h4>
                 <span>58$</span>
               </div>
@@ -116,14 +109,14 @@
           <div class="menu-third">
             <h3 class="heading-tertiary">SWEET</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>HANS TSCHIDA SPATLESE</h4>
                 <span>49$</span>
               </div>
               <p>BURGENLAND, AUSTRIA |SAMLING 88| 750 ml</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>HANS TSCHIDA EISWEIN</h4>
                 <span>120$</span>
               </div>
@@ -134,21 +127,21 @@
             <h3 class="heading-tertiary">WHITE</h3>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>SAVINI TERTULIA</h4>
                 <span>25$</span>
               </div>
               <p>COLLI APRUTINI, WŁOCHY |PECORINO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>TERRAS DE FELGUEIRAS ESCOLHA</h4>
                 <span>31$</span>
               </div>
               <p>VINHO VERDE, PORTUGALIA |ARINTO, TRAJADURA, AZAL BLANC|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>NESPOLINO</h4>
                 <span>32$</span>
               </div>
@@ -156,42 +149,42 @@
             </div>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>S.OSVALDO</h4>
                 <span>34$</span>
               </div>
               <p>VENETO, WŁOCHY |PINOT GRIGIO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>AZUMBRE VINEDOS CENTENAIROS</h4>
                 <span>38$</span>
               </div>
               <p>RUEDA, HISZPANIA |VERDEJO||</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>WEINGUT MULLER GOTTWEIGER BERG</h4>
                 <span>42$</span>
               </div>
               <p>KREMSTAL, AUSTRIA |GRUNER VELTLINER|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>BODEGA CASARENA 505</h4>
                 <span>45$</span>
               </div>
               <p>MENDOZA, ARGENTYNA |CHARDONNAY|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KARL ERBES FEINHERB</h4>
                 <span>56$</span>
               </div>
               <p>MOSEL, NIEMCY |RIESLING|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>YEALANDS BABY DOLL</h4>
                 <span>60$</span>
               </div>
@@ -199,21 +192,21 @@
             </div>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>MATTEO CORREGGIA</h4>
                 <span>66$</span>
               </div>
               <p>ROERO ARNEIS, WŁOCHY |ARNEIS|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>DOMAINE JEAN DURUP</h4>
                 <span>70$</span>
               </div>
               <p>PETIT CHABLIS, FRANCJA |CHARDONNAY|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>TOBIA SELECCION DE AUTOR BLANCO</h4>
                 <span>80$</span>
               </div>
@@ -224,21 +217,21 @@
             <h3 class="heading-tertiary">RED</h3>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>SAVINI TERTULIA</h4>
                 <span>25$</span>
               </div>
               <p>MONTEPULCIANO D`ABRUZZO, WŁOCHY |MONTEPULCIANO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>ROCCA DI CESENA RISERVA</h4>
                 <span>33$</span>
               </div>
               <p>ROMAGNA, WŁOCHY |SANGIOVESE, SYRAH|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>QUARANTA</h4>
                 <span>38$</span>
               </div>
@@ -246,35 +239,35 @@
             </div>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>UN LEGER DIFFERENT</h4>
                 <span>38$</span>
               </div>
               <p>ROUSSILLON, FRANCJA |GRENACHE, SYRAH|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>IULIUS</h4>
                 <span>37$</span>
               </div>
               <p>SALENTO, WŁOCHY |NEGROAMARO||</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>DAIMON CRIANZA</h4>
                 <span>45$</span>
               </div>
               <p>RIOJA, HISZPANIA |TEMPRANILLO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>BODEGA CASARENA 505</h4>
                 <span>45$</span>
               </div>
               <p>MENDOZA, ARGENTYNA |MALBEC|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>AUTOCARRO N°27</h4>
                 <span>48$</span>
               </div>
@@ -284,7 +277,7 @@
               </p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>YEALANDS BABY DOLL</h4>
                 <span>55$</span>
               </div>
@@ -292,63 +285,63 @@
             </div>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>MONVIERT MARTAGONA</h4>
                 <span>60$</span>
               </div>
               <p>FRIULI COLLI ORIENTALI, WŁOCHY |SCHIOPPETTINO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>WINNICA TURNAU</h4>
                 <span>65$</span>
               </div>
               <p>ZACHODNIOPOMORSKIE, POLSKA |REGENT, RONDO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>CHATEAU GOMBAUD MINECHOT</h4>
                 <span>79$</span>
               </div>
               <p>ST.EMILION GRAND CRU, FRANCJA |MERLOT, CABERNET SAUVIGNON|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>TORBRECK WOODCUTTER`S</h4>
                 <span>90$</span>
               </div>
               <p>BAROSSA, AUSTRALIA |SHIRAZ|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>ANTONIO MORAL</h4>
                 <span>95$</span>
               </div>
               <p>RIBERA DEL DUERO, HISZPANIA |TEMPRANILLO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>ENDRIZZI MERIA ROSSO</h4>
                 <span>100$</span>
               </div>
               <p>TOSCANA, WŁOCHY |CABERNET SAUVIGNON, MERLOT, SANGIOVESE|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>DOMAINE DE CHEVALIER PERE&FILS</h4>
                 <span>110$</span>
               </div>
               <p>COTE DE NUITS-VILLAGES, FRANCJA |PINOT NOIR|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>AALTO</h4>
                 <span>130$</span>
               </div>
               <p>RIBERA DEL DUERO, HISZPANIA |TEMPRANILLO|</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>SORELLE DE NICOLA</h4>
                 <span>145$</span>
               </div>
@@ -358,24 +351,24 @@
         </div>
       </div>
       <div>
-        <ul class="menu-option">
+        <ul class="menu__option">
           <li>
-            <a href="regular-menu.html" class="menu-option__list"
+            <a href="regular-menu.html" class="menu__option-list"
               >regular menu</a
             >
           </li>
           <li>
-            <a href="beer-menu.html" class="menu-option__list">drinks/beer</a>
+            <a href="beer-menu.html" class="menu__option-list">drinks/beer</a>
           </li>
           <li>
-            <a href="coffee-tea-menu.html" class="menu-option__list"
+            <a href="coffee-tea-menu.html" class="menu__option-list"
               >coffee/tea</a
             >
           </li>
           <li>
-            <a href="cocktails.html" class="menu-option__list">cocktails</a>
+            <a href="cocktails.html" class="menu__option-list">cocktails</a>
           </li>
-          <li><a href="wines.html" class="menu-option__list">wines</a></li>
+          <li><a href="wines.html" class="menu__option-list">wines</a></li>
         </ul>
       </div>
       <aside>
@@ -386,30 +379,24 @@
     </main>
     <footer>
       <div class="container footer">
-        <div class="footer-navigation">
-          <ul class="footer-options">
-            <li>
-              <a
-                href="subpage/regular-menu.html"
-                class="footer-navigation__list"
-                >thực đơn</a
-              >
-            </li>
-            <li><a href="#" class="footer-navigation__list">rượu</a></li>
-            <li><a href="#" class="footer-navigation__list">ý tưởng</a></li>
-            <li><a href="#" class="footer-navigation__list">đặt bàn</a></li>
-            <li><a href="#" class="footer-navigation__list">FAQ</a></li>
-            <li><a href="#" class="footer-navigation__list">liên hệ</a></li>
+        <div class="footer__options">
+          <ul class="footer__nav">
+            <li><a href="#" class="footer__nav-list">thực đơn</a></li>
+            <li><a href="#" class="footer__nav-list">rượu</a></li>
+            <li><a href="#" class="footer__nav-list">ý tưởng</a></li>
+            <li><a href="#" class="footer__nav-list">đặt bàn</a></li>
+            <li><a href="#" class="footer__nav-list">FAQ</a></li>
+            <li><a href="#" class="footer__nav-list">liên hệ</a></li>
           </ul>
-          <div class="footer-scroll">
-            <p class="footer-scroll__text">Đầu trang</p>
-            <div class="footer-scroll__icon">
-              <i class="ph-arrow-up footer-icon"></i>
+          <div class="footer__scroll">
+            <p class="footer__scroll-text">Đầu trang</p>
+            <div class="footer__scroll-icon">
+              <i class="ph-arrow-up footer__icon"></i>
             </div>
           </div>
         </div>
-        <div class="footer-info">
-          <div class="footer-info__time">
+        <div class="footer__info">
+          <div class="footer__time">
             <div class="helper-flex">
               <span>Thứ 2 - Thứ 5</span>
               <span>14:00-22:00</span>
@@ -423,19 +410,21 @@
               <span>14:00-21:00</span>
             </div>
           </div>
-          <div class="footer-info__meta">
-            <a href="#" class="footer-info__link">Instagram</a>
-            <a href="#" class="footer-info__link">facebook</a>
+          <div class="footer__meta">
+            <a href="#" class="footer__link">Instagram</a>
+            <a href="#" class="footer__link">facebook</a>
           </div>
         </div>
-        <div class="footer-extra">
-          <div class="contact">
+        <div class="footer__extra">
+          <div class="footer__contact">
             <p>+ 0123456789 (VN)</p>
-            <a href="mailto:khanh.nguyenduy@hcmut.edu.com" class="contact-link"
+            <a
+              href="mailto:khanh.nguyenduy@hcmut.edu.com"
+              class="footer__contact-link"
               >khanh.nguyenduy@hcmut.edu.vn</a
             >
           </div>
-          <div class="conclude">
+          <div class="footer__conclude">
             Đây là trang web được lấy ý tưởng thiết kế từ
             https://punkt-gdynia.pl, website này được xây dựng và tinh chỉnh nội
             dung theo Nguyễn Duy Khánh - HCMUT.

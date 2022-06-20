@@ -10,9 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../sass/main.css" />
     <script defer src="https://unpkg.com/phosphor-icons"></script>
     <script defer src="script.js"></script>
     <title>Saturn Bistro</title>
@@ -20,98 +18,97 @@
   <body>
     <header>
       <div class="container header">
-        <a href="../../index.html"
+        <a href="../index.html"
           ><img
-            src="../img/logo/smile_fullsize.png"
+            src="../img/logo/smile_yellow.png"
             alt="the bistro's logo"
-            class="header-img"
+            class="header__img"
         /></a>
-        <div class="menu-btn"><span>Menu</span></div>
-        <nav class="header-nav">
-          <ul class="color-select">
+        <nav class="header__nav">
+          <ul class="header__color">
             <li>
-              <span class="color-item__black color-select__retro"></span>
-              <span class="color-name hidden">RetroYellow</span>
+              <span class="header__item header__color-retro"></span>
+              <span class="hidden">RetroYellow</span>
             </li>
             <li>
-              <span class="color-item__black color-select__vintage"></span>
-              <span class="color-name hidden">VintageSalmon</span>
+              <span class="header__item header__color-vintage"></span>
+              <span class="hidden">VintageSalmon</span>
             </li>
             <li>
-              <span class="color-item__black color-select__classic"></span>
-              <span class="color-name hidden">ClassicEcru</span>
+              <span class="header__item header__color-classic"></span>
+              <span class="hidden">ClassicEcru</span>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <div class="max-container">
-        <div class="wine-detail">
+      <div class="container">
+        <h2 class="heading-secondary heading-secondary-modifier">wine</h2>
+        <div class="wine__detail u-margin-bottom-big">
           <div>
-            <img src="../../img/wine1.jpg" alt="Wine" class="wine-img" />
+            <img src="../../img/wine1.jpg" alt="Wine" class="wine__img-large" />
           </div>
-          <div class="wine-detail__text">
-            <h2 class="heading-secondary">wine</h2>
+          <div class="wine__text">
             <p class="heading-bonus">
               Saturn là nơi duy nhất trên bản đồ rượu của các quận trung tâm
               thành phố Hồ Chí Minh, nơi mà ở đó bạn sẽ tìm thấy cả quán rượu
               với cửa hàng và nhà hàng.
             </p>
-            <p class="text-box">
+            <p class="wine__box">
               Nhà hàng của chúng tôi được đặc trưng bởi các món ăn nguyên bản
-              theo mùa và được bổ sung bởi các loại rượu vang chất lượng . Chúng
+              theo mùa và được bổ sung bởi các loại rượu vang chất lượng. Chúng
               tôi muốn tạo ra một nơi làm hài khách hàng bằng tất cả các giác
               quan. Một nơi mà chất lượng tốt đi đôi với giá cả phải chăng và cả
               bầu không khí bình dị nhưng không kém phần độc đáo.
             </p>
           </div>
         </div>
-        <div class="wine-advise">
-          <div class="wine-advise__gift">
-            <img src="../../img/wine2.jpg" alt="Wine" class="wine-img" />
+        <div class="wine__advise">
+          <div class="wine__gift">
+            <img src="../../img/wine2.jpg" alt="Wine" class="wine__img-small" />
           </div>
-          <div class="wine-advise__glass">
-            <img src="../../img/wine3.jpg" alt="Wine" class="wine-img" />
+          <div class="wine__glass">
+            <img src="../../img/wine3.jpg" alt="Wine" class="wine__img-small" />
           </div>
-          <p class="text-box text-box__gift">
+          <p class="wine__box wine__box-gift">
             Chúng tôi cũng sẽ tư vấn cho bạn về việc chọn một loại rượu đặc biệt
-            để làm quà tặng,<br />
-            hoặc những chai rượu mang về nhà. Mỗi loại rượu chúng tôi đều đóng
-            gói trong một túi quà.
+            để làm quà tặng, hoặc những chai rượu mang về nhà. Mỗi loại rượu
+            chúng tôi đều đóng gói trong một túi quà.
           </p>
-          <p class="text-box text-box__glass">
+          <p class="wine__box wine__box-glass">
             Đội ngũ nhân viên chuyên nghiệp và kiến thức đang chờ bạn trong quầy
-            rượu của chúng tôi,<br />
-            nơi bạn có thể tìm thấy cả rượu vang đóng chai và nhiều loại rượu
-            vang bên ly.
+            rượu của chúng tôi, nơi bạn có thể tìm thấy cả rượu vang đóng chai
+            và nhiều loại rượu vang bên ly.
           </p>
         </div>
         <p class="heading-direct">
-          Khám phá <a href="wines.html">danh sách rượu vang</a> của chúng tôi
+          Khám phá
+          <a href="wines.html" class="link-direct">danh sách rượu vang</a> của
+          chúng tôi
         </p>
       </div>
     </main>
     <footer>
       <div class="container footer">
-        <div class="footer-navigation">
-          <ul class="footer-options">
-            <li><a href="#" class="footer-navigation__list">thực đơn</a></li>
-            <li><a href="#" class="footer-navigation__list">rượu</a></li>
-            <li><a href="#" class="footer-navigation__list">ý tưởng</a></li>
-            <li><a href="#" class="footer-navigation__list">đặt bàn</a></li>
-            <li><a href="#" class="footer-navigation__list">FAQ</a></li>
-            <li><a href="#" class="footer-navigation__list">liên hệ</a></li>
+        <div class="footer__options">
+          <ul class="footer__nav">
+            <li><a href="#" class="footer__nav-list">thực đơn</a></li>
+            <li><a href="#" class="footer__nav-list">rượu</a></li>
+            <li><a href="#" class="footer__nav-list">ý tưởng</a></li>
+            <li><a href="#" class="footer__nav-list">đặt bàn</a></li>
+            <li><a href="#" class="footer__nav-list">FAQ</a></li>
+            <li><a href="#" class="footer__nav-list">liên hệ</a></li>
           </ul>
-          <div class="footer-scroll">
-            <p class="footer-scroll__text">Đầu trang</p>
-            <div class="footer-scroll__icon">
-              <i class="ph-arrow-up footer-icon"></i>
+          <div class="footer__scroll">
+            <p class="footer__scroll-text">Đầu trang</p>
+            <div class="footer__scroll-icon">
+              <i class="ph-arrow-up footer__icon"></i>
             </div>
           </div>
         </div>
-        <div class="footer-info">
-          <div class="footer-info__time">
+        <div class="footer__info">
+          <div class="footer__time">
             <div class="helper-flex">
               <span>Thứ 2 - Thứ 5</span>
               <span>14:00-22:00</span>
@@ -125,19 +122,21 @@
               <span>14:00-21:00</span>
             </div>
           </div>
-          <div class="footer-info__meta">
-            <a href="#" class="footer-info__link">Instagram</a>
-            <a href="#" class="footer-info__link">facebook</a>
+          <div class="footer__meta">
+            <a href="#" class="footer__link">Instagram</a>
+            <a href="#" class="footer__link">facebook</a>
           </div>
         </div>
-        <div class="footer-extra">
-          <div class="contact">
+        <div class="footer__extra">
+          <div class="footer__contact">
             <p>+ 0123456789 (VN)</p>
-            <a href="mailto:khanh.nguyenduy@hcmut.edu.com" class="contact-link"
+            <a
+              href="mailto:khanh.nguyenduy@hcmut.edu.com"
+              class="footer__contact-link"
               >khanh.nguyenduy@hcmut.edu.vn</a
             >
           </div>
-          <div class="conclude">
+          <div class="footer__conclude">
             Đây là trang web được lấy ý tưởng thiết kế từ
             https://punkt-gdynia.pl, website này được xây dựng và tinh chỉnh nội
             dung theo Nguyễn Duy Khánh - HCMUT.

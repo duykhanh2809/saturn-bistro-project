@@ -10,14 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/menu.css" />
-    <style>
-      body {
-        background-color: #ccc5a8;
-      }
-    </style>
+    <link rel="stylesheet" href="../sass/main.css" />
     <script defer src="https://unpkg.com/phosphor-icons"></script>
     <script defer src="script.js"></script>
     <title>Saturn Bistro</title>
@@ -25,28 +18,27 @@
   <body>
     <header>
       <div class="container header">
-        <a href="..\index.html"
+        <a href="../index.html"
           ><img
-            src="..\img\logo\smile_yellow.png"
+            src="../img/logo/smile_yellow.png"
             alt="the bistro's logo"
-            class="header-img"
+            class="header__img"
         /></a>
-        <nav class="header-nav">
-          <ul class="color-select">
+        <nav class="header__nav">
+          <ul class="header__color">
             <li>
-              <span class="color-item color-select__retro"></span>
-              <span class="color-name hidden">RetroYellow</span>
+              <span class="header__item header__color-retro"></span>
+              <span class="hidden">RetroYellow</span>
             </li>
             <li>
-              <span class="color-item color-select__vintage"></span>
-              <span class="color-name hidden">VintageSalmon</span>
+              <span class="header__item header__color-vintage"></span>
+              <span class="hidden">VintageSalmon</span>
             </li>
             <li>
-              <span class="color-item color-select__classic"></span>
-              <span class="color-name hidden">ClassicEcru</span>
+              <span class="header__item header__color-classic"></span>
+              <span class="hidden">ClassicEcru</span>
             </li>
           </ul>
-       
         </nav>
       </div>
     </header>
@@ -56,21 +48,21 @@
           <div class="menu-first">
             <h3 class="heading-tertiary">Thức uống lạnh</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>Nước ép trái cây</h4>
                 <span>5$</span>
               </div>
               <p>Cam, bưởi hỗn hợp</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>Nước chanh truyền thống</h4>
                 <span>3$</span>
               </div>
               <p>chanh, chanh, xi-rô đường và nước</p>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>Nước chanh bạc hà</h4>
                 <span>6$</span>
               </div>
@@ -78,31 +70,31 @@
             </div>
 
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>Pepsi - 0.2L</h4>
                 <span>4$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>7UP - 0.2L</h4>
                 <span>4$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>MIRINDA - 0.2L</h4>
                 <span>4$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>SAN PELLEGRINO - 0.75L</h4>
                 <span>8$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>ACQUA PANNA - 0.75L</h4>
                 <span>6$</span>
               </div>
@@ -111,7 +103,7 @@
           <div class="menu-second">
             <h3 class="heading-tertiary">KOKTAJLE</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>ananas</h4>
                 <span>10$</span>
               </div>
@@ -121,13 +113,13 @@
           <div class="menu-third">
             <h3 class="heading-tertiary">PIWO BECZKA</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KOZEL LEZAK JASNY - 0,5 L</h4>
                 <span>12$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KOZEL LEZAK JASNY - 0,3 L</h4>
                 <span>10$</span>
               </div>
@@ -136,25 +128,25 @@
           <div class="menu-fourth">
             <h3 class="heading-tertiary">PIWO BUTELKA</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KSIĄŻĘCE PSZENICZNE 0,5 L</h4>
                 <span>12$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KSIĄŻĘCE IPA 0,5 L</h4>
                 <span>14$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KSIĄŻĘCE CZERWONY LAGER 0,5 L</h4>
                 <span>12$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>KSIĄŻĘCE CIEMNE ŁAGODNE 0,5 L</h4>
                 <span>12$</span>
               </div>
@@ -163,13 +155,13 @@
           <div class="menu-fifth">
             <h3 class="heading-tertiary">PIWO BEZALKO.</h3>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>LECH RẢNH 0,33 L</h4>
                 <span>9$</span>
               </div>
             </div>
             <div class="dish">
-              <div class="dish-item">
+              <div class="dish__item">
                 <h4>LECH MIỄN PHÍ LIMONKA MIĘTA 0,33 L</h4>
                 <span>9$</span>
               </div>
@@ -178,24 +170,24 @@
         </div>
       </div>
       <div>
-        <ul class="menu-option">
+        <ul class="menu__option">
           <li>
-            <a href="regular-menu.html" class="menu-option__list"
+            <a href="regular-menu.html" class="menu__option-list"
               >regular menu</a
             >
           </li>
           <li>
-            <a href="beer-menu.html" class="menu-option__list">drinks/beer</a>
+            <a href="beer-menu.html" class="menu__option-list">drinks/beer</a>
           </li>
           <li>
-            <a href="coffee-tea-menu.html" class="menu-option__list"
+            <a href="coffee-tea-menu.html" class="menu__option-list"
               >coffee/tea</a
             >
           </li>
           <li>
-            <a href="cocktails.html" class="menu-option__list">cocktails</a>
+            <a href="cocktails.html" class="menu__option-list">cocktails</a>
           </li>
-          <li><a href="wines.html" class="menu-option__list">wines</a></li>
+          <li><a href="wines.html" class="menu__option-list">wines</a></li>
         </ul>
       </div>
       <aside>
@@ -206,30 +198,24 @@
     </main>
     <footer>
       <div class="container footer">
-        <div class="footer-navigation">
-          <ul class="footer-options">
-            <li>
-              <a
-                href="subpage/regular-menu.html"
-                class="footer-navigation__list"
-                >thực đơn</a
-              >
-            </li>
-            <li><a href="#" class="footer-navigation__list">rượu</a></li>
-            <li><a href="#" class="footer-navigation__list">ý tưởng</a></li>
-            <li><a href="#" class="footer-navigation__list">đặt bàn</a></li>
-            <li><a href="#" class="footer-navigation__list">FAQ</a></li>
-            <li><a href="#" class="footer-navigation__list">liên hệ</a></li>
+        <div class="footer__options">
+          <ul class="footer__nav">
+            <li><a href="#" class="footer__nav-list">thực đơn</a></li>
+            <li><a href="#" class="footer__nav-list">rượu</a></li>
+            <li><a href="#" class="footer__nav-list">ý tưởng</a></li>
+            <li><a href="#" class="footer__nav-list">đặt bàn</a></li>
+            <li><a href="#" class="footer__nav-list">FAQ</a></li>
+            <li><a href="#" class="footer__nav-list">liên hệ</a></li>
           </ul>
-          <div class="footer-scroll">
-            <p class="footer-scroll__text">Đầu trang</p>
-            <div class="footer-scroll__icon">
-              <i class="ph-arrow-up footer-icon"></i>
+          <div class="footer__scroll">
+            <p class="footer__scroll-text">Đầu trang</p>
+            <div class="footer__scroll-icon">
+              <i class="ph-arrow-up footer__icon"></i>
             </div>
           </div>
         </div>
-        <div class="footer-info">
-          <div class="footer-info__time">
+        <div class="footer__info">
+          <div class="footer__time">
             <div class="helper-flex">
               <span>Thứ 2 - Thứ 5</span>
               <span>14:00-22:00</span>
@@ -243,19 +229,21 @@
               <span>14:00-21:00</span>
             </div>
           </div>
-          <div class="footer-info__meta">
-            <a href="#" class="footer-info__link">Instagram</a>
-            <a href="#" class="footer-info__link">facebook</a>
+          <div class="footer__meta">
+            <a href="#" class="footer__link">Instagram</a>
+            <a href="#" class="footer__link">facebook</a>
           </div>
         </div>
-        <div class="footer-extra">
-          <div class="contact">
+        <div class="footer__extra">
+          <div class="footer__contact">
             <p>+ 0123456789 (VN)</p>
-            <a href="mailto:khanh.nguyenduy@hcmut.edu.com" class="contact-link"
+            <a
+              href="mailto:khanh.nguyenduy@hcmut.edu.com"
+              class="footer__contact-link"
               >khanh.nguyenduy@hcmut.edu.vn</a
             >
           </div>
-          <div class="conclude">
+          <div class="footer__conclude">
             Đây là trang web được lấy ý tưởng thiết kế từ
             https://punkt-gdynia.pl, website này được xây dựng và tinh chỉnh nội
             dung theo Nguyễn Duy Khánh - HCMUT.

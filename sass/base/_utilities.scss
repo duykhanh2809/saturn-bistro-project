@@ -8,26 +8,13 @@
   justify-content: flex-end;
 }
 
-.grid {
-  display: grid;
-}
-
 .grid--2-cols {
+  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .hidden {
   display: none;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 68.6rem;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.15);
-  z-index: -1;
 }
 
 .copyright {
@@ -37,6 +24,12 @@
   line-height: 1;
 }
 
+.heading-secondary-modifier {
+  text-align: right;
+  margin-bottom: 2rem;
+  margin-top: -4rem;
+}
+
 /***********************/
 
 .u-center-text {
@@ -44,22 +37,22 @@
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 2rem !important;
+  margin-bottom: 2rem;
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
 }
 .u-margin-bottom-big {
-  margin-bottom: 8rem !important;
+  margin-bottom: 8rem;
 
   @include respond(tab-port) {
     margin-bottom: 5rem;
   }
 }
-
-.u-margin-top-big {
-  margin-top: 8rem !important;
+.u-margin-bottom-huge {
+  margin-bottom: 12rem;
 }
+
 .u-margin-top-huge {
-  margin-top: 10rem !important;
+  margin-top: 10rem;
 }

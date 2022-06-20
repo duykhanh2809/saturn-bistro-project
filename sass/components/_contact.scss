@@ -18,5 +18,28 @@
 
   &__time {
     margin-bottom: 3rem;
+    div {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  &__info {
+    font-size: 1.8rem;
+    color: #111;
+    font-weight: 800;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover,
+    &:active {
+      color: #444;
+    }
   }
 }
