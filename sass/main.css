@@ -1,4 +1,4 @@
-.faq__content, .footer, .footer__scroll, .footer__time, .footer__meta {
+.faq__content, .footer, .footer__scroll, .footer__time, .footer__meta, .reservation, .reservation__text, .reservation__sale-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,6 +6,34 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.link__direct, .link__direct-modify {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link__direct:link, .link__direct-modify:link, .link__direct:visited, .link__direct-modify:visited {
+  text-decoration: none;
+  color: var(--color-black);
+  position: relative;
+  padding-bottom: 0.7rem;
+}
+
+.link__direct::before, .link__direct-modify::before {
+  content: "";
+  display: inline-block;
+  background-image: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-black.svg");
+  background-repeat: no-repeat;
+  height: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.link__direct:hover::before, .link__direct-modify:hover::before {
+  -webkit-animation: moveWave 4s linear infinite;
+          animation: moveWave 4s linear infinite;
 }
 
 /*
@@ -34,6 +62,14 @@ breakpoint argument choices:
   --color-primary: #eee200;
   --color-secondary: #f9d3a8;
   --color-tertiary: #fffee6;
+  --color-selection: #55c57a;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-pale-pink: #f78da7;
+  --color-bear: #ccc5a8;
+  --color-tea: #bfb382;
+  --color-cocktail: #eabd01;
+  --color-wines: #bac2c0;
 }
 
 html {
@@ -77,13 +113,13 @@ body {
 }
 
 ::-moz-selection {
-  background-color: #55c57a;
-  color: #fff;
+  background-color: var(--color-selection);
+  color: var(--color-white);
 }
 
 ::selection {
-  background-color: #55c57a;
-  color: #fff;
+  background-color: var(--color-selection);
+  color: var(--color-white);
 }
 
 video {
@@ -97,103 +133,31 @@ video {
   z-index: -2;
 }
 
-@-webkit-keyframes moveInLeft {
+@-webkit-keyframes moveWave {
   0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
-  }
-  80% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
-@keyframes moveInLeft {
+@keyframes moveWave {
   0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
-  }
-  80% {
-    -webkit-transform: translateX(1rem);
-            transform: translateX(1rem);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@-webkit-keyframes moveInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(10rem);
-            transform: translateX(10rem);
-  }
-  80% {
-    -webkit-transform: translateX(-1rem);
-            transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(10rem);
-            transform: translateX(10rem);
-  }
-  80% {
-    -webkit-transform: translateX(-1rem);
-            transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@-webkit-keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #eee200;
+  color: var(--color-primary);
 }
 
 .heading-primary {
@@ -204,7 +168,7 @@ body {
 .heading-secondary {
   font-size: 6rem;
   font-weight: 900;
-  color: #000;
+  color: var(--color-black);
 }
 
 .heading-tertiary {
@@ -227,11 +191,21 @@ body {
   font-weight: 700;
 }
 
-.heading-direct {
+.heading__direct {
   font-size: 3rem;
   font-weight: 900;
-  color: #000;
+  color: var(--color-black);
   text-align: center;
+}
+
+.heading__direct-modify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.75rem;
 }
 
 h4 {
@@ -241,12 +215,6 @@ h4 {
 
 .strong {
   font-weight: 800;
-}
-
-.link-direct:link, .link-direct:visited {
-  text-decoration: none;
-  color: #000;
-  border-bottom: 2px solid #000;
 }
 
 .helper-flex {
@@ -292,17 +260,17 @@ h4 {
   margin-top: -4rem;
 }
 
-/***********************/
-.u-center-text {
-  text-align: center !important;
+.link__direct::before {
+  width: 250%;
 }
 
+.link__direct-modify::before {
+  width: 165%;
+}
+
+/***********************/
 .u-margin-bottom-small {
   margin-bottom: 2rem;
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-big {
@@ -396,7 +364,6 @@ h4 {
 .faq__content {
   font-size: 2.2rem;
   font-weight: 500;
-  margin-left: 10rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -460,15 +427,15 @@ h4 {
 }
 
 .header__color-retro {
-  background-color: #eee200;
+  background-color: var(--color-primary);
 }
 
 .header__color-vintage {
-  background-color: #f9d3a8;
+  background-color: var(--color-secondary);
 }
 
 .header__color-classic {
-  background-color: #fffee6;
+  background-color: var(--color-tertiary);
 }
 
 .header__item {
@@ -478,6 +445,11 @@ h4 {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: 1px solid #eee200;
+}
+
+.header__item-modify {
+  border: 1px solid var(--color-black);
+  padding: 0.9rem;
 }
 
 .footer {
@@ -632,7 +604,7 @@ h4 {
   position: absolute;
   bottom: -0.3rem;
   left: 0;
-  background-color: #eee200;
+  background-color: var(--color-primary);
   width: 0rem;
   height: 0.5rem;
   border-radius: 11px;
@@ -640,7 +612,7 @@ h4 {
   transition: all 0.5s;
 }
 
-.hero__options-list:hover:after, .hero__options-list:active:after {
+.hero__options-list:hover:after {
   width: 13rem;
 }
 
@@ -684,15 +656,15 @@ h4 {
 
 .hero__scroll {
   padding: 1rem;
-  -webkit-box-shadow: 0px 0px 5px #eee200;
-          box-shadow: 0px 0px 5px #eee200;
+  -webkit-box-shadow: 0px 0px 5px var(--color-primary);
+          box-shadow: 0px 0px 5px var(--color-primary);
   border-radius: 50%;
 }
 
 .hero__scroll:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 8px #eee200;
-          box-shadow: 0 0 8px #eee200;
+  -webkit-box-shadow: 0 0 8px var(--color-primary);
+          box-shadow: 0 0 8px var(--color-primary);
 }
 
 /**************************/
@@ -782,13 +754,6 @@ h4 {
   max-width: 150rem;
   margin: 0 auto;
   padding: 8rem 12rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 13rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -831,13 +796,6 @@ h4 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 35%;
           flex: 0 1 35%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -864,16 +822,9 @@ h4 {
 }
 
 .reservation__sale-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .reservation__sale .reservation__box {
@@ -889,13 +840,6 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 1.4rem;
-}
-
-/**************************/
-/* GENERAL */
-/**************************/
-body {
-  background-color: #efe4ca;
 }
 
 .menu {
@@ -1017,7 +961,7 @@ aside {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #000;
+  color: var(--color-black);
 }
 
 .menu-btn:hover {
@@ -1028,7 +972,7 @@ aside {
   content: "";
   display: block;
   padding: 3.2rem;
-  background-color: #000;
+  background-color: var(--color-black);
   border-radius: 50%;
   position: relative;
   z-index: -10;
@@ -1040,7 +984,7 @@ aside {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #eee200;
+  color: var(--color-primary);
   font-size: 1.3rem;
   text-transform: uppercase;
   font-weight: 800;
@@ -1048,17 +992,8 @@ aside {
   z-index: 10;
 }
 
-.color-item__black {
-  display: block;
-  padding: 1rem;
-  border-radius: 50%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  border: 1px double #000;
-}
-
 .main {
-  color: #000;
+  color: var(--color-black);
 }
 
 .wine__detail {
@@ -1119,16 +1054,7 @@ aside {
 }
 
 .wine__img {
-  border: 4px solid #000;
-}
-
-.wine__img-large {
-  border: 4px solid #000;
-  width: 100%;
-}
-
-.wine__img-small {
-  border: 4px solid #000;
+  border: 4px solid var(--color-black);
   width: 100%;
 }
 

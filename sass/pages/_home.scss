@@ -30,15 +30,14 @@
     position: absolute;
     bottom: -0.3rem;
     left: 0;
-    background-color: #eee200;
+    background-color: var(--color-primary);
     width: 0rem;
     height: 0.5rem;
     border-radius: 11px;
     transition: all 0.5s;
   }
 
-  &__options-list:hover:after,
-  &__options-list:active:after {
+  &__options-list:hover:after {
     width: 13rem;
   }
 
@@ -71,11 +70,11 @@
 
   &__scroll {
     padding: 1rem;
-    box-shadow: 0px 0px 5px #eee200;
+    box-shadow: 0px 0px 5px var(--color-primary);
     border-radius: 50%;
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 8px #eee200;
+      box-shadow: 0 0 8px var(--color-primary);
     }
   }
 }

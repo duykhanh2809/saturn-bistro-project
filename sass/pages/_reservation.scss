@@ -2,8 +2,7 @@
   max-width: 150rem;
   margin: 0 auto;
   padding: 8rem 12rem;
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column-placeholder;
   gap: 13rem;
   align-items: center;
 
@@ -29,8 +28,7 @@
 
   &__text {
     flex: 0 1 35%;
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column-placeholder;
     justify-content: space-between;
   }
 
@@ -52,9 +50,8 @@
     gap: 10rem;
 
     &-text {
-      display: flex;
+      @extend %flex-column-placeholder;
       justify-content: space-between;
-      flex-direction: column;
     }
   }
 

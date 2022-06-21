@@ -19,13 +19,13 @@
     gap: 1.8rem;
 
     &-retro {
-      background-color: #eee200;
+      background-color: var(--color-primary);
     }
     &-vintage {
-      background-color: #f9d3a8;
+      background-color: var(--color-secondary);
     }
     &-classic {
-      background-color: #fffee6;
+      background-color: var(--color-tertiary);
     }
   }
 
@@ -35,5 +35,10 @@
     border-radius: 50%;
     transition: all 0.5s;
     border: 1px solid #eee200;
+
+    &-modify {
+      border: 1px solid var(--color-black);
+      padding: 0.9rem;
+    }
   }
 }

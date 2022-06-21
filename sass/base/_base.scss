@@ -10,6 +10,18 @@
   --color-primary: #eee200;
   --color-secondary: #f9d3a8;
   --color-tertiary: #fffee6;
+
+  --color-selection: #55c57a;
+  --color-white: #fff;
+
+  --color-black: #000;
+
+  // Menu subpage
+  --color-pale-pink: #f78da7;
+  --color-bear: #ccc5a8;
+  --color-tea: #bfb382;
+  --color-cocktail: #eabd01;
+  --color-wines: #bac2c0;
 }
 
 html {
@@ -46,15 +58,14 @@ body {
 }
 
 ::selection {
-  background-color: $color-primary;
-  color: $color-white;
+  background-color: var(--color-selection);
+  color: var(--color-white);
 }
 
 video {
   position: absolute;
   top: 0;
   left: 0;
-  // height: 100%;
   width: 100%;
   object-fit: cover;
   display: block;

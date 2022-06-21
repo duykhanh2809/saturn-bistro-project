@@ -9,7 +9,7 @@
   &__content {
     font-size: 2.2rem;
     font-weight: 500;
-    margin-left: 10rem;
+    // margin-left: 10rem;
     @extend %flex-column-placeholder;
     align-items: flex-start;
   }

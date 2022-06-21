@@ -30,18 +30,26 @@
   margin-top: -4rem;
 }
 
-/***********************/
-
-.u-center-text {
-  text-align: center !important;
+.link__direct {
+  @extend %link-direct;
+  &::before {
+    @include widthLinkDirect(250%);
+  }
 }
+
+.link__direct-modify {
+  @extend %link-direct;
+  &::before {
+    @include widthLinkDirect(165%);
+  }
+}
+
+/***********************/
 
 .u-margin-bottom-small {
   margin-bottom: 2rem;
 }
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
-}
+
 .u-margin-bottom-big {
   margin-bottom: 8rem;
 
