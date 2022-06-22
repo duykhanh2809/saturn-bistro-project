@@ -66,8 +66,10 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+  height: 68rem; // TAM THOI VAY SAU NAY QUAY LAI XEM XET SAU
   width: 100%;
   object-fit: cover;
   display: block;
   z-index: -2;
+  overflow: hidden;
 }

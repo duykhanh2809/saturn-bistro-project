@@ -126,11 +126,13 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+  height: 68rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   z-index: -2;
+  overflow: hidden;
 }
 
 @-webkit-keyframes moveWave {
@@ -386,13 +388,30 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   width: 80rem;
+  cursor: pointer;
+}
+
+.faq__question i {
+  font-size: 2.5rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .faq__answer {
-  margin-top: 1.6rem;
   font-size: 1.3rem;
   font-weight: 400;
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.faq__answer-active {
+  margin-top: 1.6rem;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  opacity: 1;
 }
 
 .header {
@@ -575,6 +594,10 @@ h4 {
 /**************************/
 /* SECTION HERO*/
 /**************************/
+.section-hero {
+  margin-bottom: 3.4rem;
+}
+
 .hero__detail {
   display: -webkit-box;
   display: -ms-flexbox;
