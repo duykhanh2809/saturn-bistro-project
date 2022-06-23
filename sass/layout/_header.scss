@@ -33,8 +33,8 @@
     display: block;
     padding: 1rem;
     border-radius: 50%;
-    transition: all 0.5s;
-    border: 1px solid #eee200;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 1px inset;
 
     &-modify {
       border: 1px solid var(--color-black);

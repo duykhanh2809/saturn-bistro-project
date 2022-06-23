@@ -17,10 +17,10 @@
   --color-black: #000;
 
   // Menu subpage
-  --color-pale-pink: #f78da7;
-  --color-bear: #ccc5a8;
-  --color-tea: #bfb382;
-  --color-cocktail: #eabd01;
+  --color-pale-pink: #ff9c88;
+  --color-beer: #ccc5a8;
+  --color-coffee: #bfb382;
+  --color-cocktails: #eabd01;
   --color-wines: #bac2c0;
 }
 
@@ -49,6 +49,9 @@ body {
     // width < 900px
     padding: 0;
   }
+
+  // Thay doi backgroundColor menu
+  transition: background-color 0.5s;
 }
 
 .container {

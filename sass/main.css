@@ -65,10 +65,10 @@ breakpoint argument choices:
   --color-selection: #55c57a;
   --color-white: #fff;
   --color-black: #000;
-  --color-pale-pink: #f78da7;
-  --color-bear: #ccc5a8;
-  --color-tea: #bfb382;
-  --color-cocktail: #eabd01;
+  --color-pale-pink: #ff9c88;
+  --color-beer: #ccc5a8;
+  --color-coffee: #bfb382;
+  --color-cocktails: #eabd01;
   --color-wines: #bac2c0;
 }
 
@@ -98,6 +98,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: var(--color-primary);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 @media (max-width: 56.25em) {
@@ -155,6 +157,302 @@ video {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+}
+
+.header__color-retro {
+  position: relative;
+}
+
+.header__color-retro::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__color-retro::before {
+  content: "RetroYellow";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 40%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__color-retro:hover::after {
+  height: 8rem;
+}
+
+.header__color-retro:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__color-vintage {
+  position: relative;
+}
+
+.header__color-vintage::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-primary);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__color-vintage::before {
+  content: "VintageSalmon";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__color-vintage:hover::after {
+  height: 10rem;
+}
+
+.header__color-vintage:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__color-classic {
+  position: relative;
+}
+
+.header__color-classic::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-primary);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__color-classic::before {
+  content: "ClassicEcru";
+  display: inline-block;
+  position: absolute;
+  top: -5%;
+  right: 55%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__color-classic:hover::after {
+  height: 8rem;
+}
+
+.header__color-classic:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__color-retro-active {
+  position: relative;
+}
+
+.header__color-retro-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-primary);
+  outline-offset: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__color-retro-active::before {
+  content: "RetroYellow";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 40%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__color-retro-active:hover::after {
+  height: 8rem;
+}
+
+.header__color-retro-active:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__color-vintage-active {
+  position: relative;
+}
+
+.header__color-vintage-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-primary);
+  outline-offset: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__color-vintage-active::before {
+  content: "VintageSalmon";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__color-vintage-active:hover::after {
+  height: 10rem;
+}
+
+.header__color-vintage-active:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__color-classic-active {
+  position: relative;
+}
+
+.header__color-classic-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-primary);
+  outline-offset: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__color-classic-active::before {
+  content: "ClassicEcru";
+  display: inline-block;
+  position: absolute;
+  top: -5%;
+  right: 55%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__color-classic-active:hover::after {
+  height: 8rem;
+}
+
+.header__color-classic-active:hover::before {
+  color: var(--color-black);
+  visibility: visible;
 }
 
 body {
@@ -461,9 +759,9 @@ h4 {
   display: block;
   padding: 1rem;
   border-radius: 50%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  border: 1px solid #eee200;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px 1px inset;
+          box-shadow: 0px 0px 0px 1px inset;
 }
 
 .header__item-modify {
@@ -596,6 +894,8 @@ h4 {
 /**************************/
 .section-hero {
   margin-bottom: 3.4rem;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .hero__detail {
@@ -679,15 +979,10 @@ h4 {
 
 .hero__scroll {
   padding: 1rem;
-  -webkit-box-shadow: 0px 0px 5px var(--color-primary);
-          box-shadow: 0px 0px 5px var(--color-primary);
+  -webkit-box-shadow: 0px 0px 0px 2px inset;
+          box-shadow: 0px 0px 0px 2px inset;
   border-radius: 50%;
-}
-
-.hero__scroll:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 8px var(--color-primary);
-          box-shadow: 0 0 8px var(--color-primary);
 }
 
 /**************************/

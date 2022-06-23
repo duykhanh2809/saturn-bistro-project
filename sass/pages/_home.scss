@@ -3,6 +3,7 @@
 /**************************/
 .section-hero {
   margin-bottom: 3.4rem;
+  transition: color 0.5s;
 }
 
 .hero {
@@ -73,12 +74,9 @@
 
   &__scroll {
     padding: 1rem;
-    box-shadow: 0px 0px 5px var(--color-primary);
+    box-shadow: 0px 0px 0px 2px inset;
     border-radius: 50%;
-    &:hover {
-      cursor: pointer;
-      box-shadow: 0 0 8px var(--color-primary);
-    }
+    cursor: pointer;
   }
 }
 
