@@ -1,30 +1,57 @@
 "use strict";
 
-// CHANGE BACKGROUND-COLOR HOMEPAGE
-const retroBtn = document.querySelector(".header__color-retro");
-const vintageBtn = document.querySelector(".header__color-vintage");
-const classicBtn = document.querySelector(".header__color-classic");
-const heroSection = document.querySelector(".section-hero");
-const headerImg = document.querySelector(".header__img");
-const footerIcon = document.querySelector(".footer__icon");
+// CHANGE STATE ON HOMEPAGE
+
+const heroOptions = document.querySelectorAll(".hero__options-list");
 
 retroBtn.addEventListener("click", () => {
-  document.body.style.backgroundColor = "var(--color-primary)";
-  heroSection.style.color = "var(--color-primary)";
+  setState("var(--color-primary)");
   headerImg.src = "../img/logo/smile_yellow.png";
-  footerIcon.style.color = "var(--color-primary)";
+
+  // CHANGE STATE ACTIVE
+  retroBtn.classList.add("header__color-retro-active");
+  vintageBtn.classList.remove("header__color-vintage-active");
+  classicBtn.classList.remove("header__color-classic-active");
+
+  // CHANGE COLOR OUTLINE
+  changeOutline("var(--color-primary)");
+  // CHANGE HOVER EFFECT
+  heroOptions.forEach((ele) => {
+    ele.style.setProperty("--source-default", "var(--source-yellow)");
+  });
 });
 
 vintageBtn.addEventListener("click", () => {
-  document.body.style.backgroundColor = "var(--color-secondary)";
-  heroSection.style.color = "var(--color-secondary)";
+  setState("var(--color-secondary)");
   headerImg.src = "../img/logo/smile_pastel.png";
-  footerIcon.style.color = "var(--color-secondary)";
+
+  // CHANGE STATE ACTIVE
+  retroBtn.classList.remove("header__color-retro-active");
+  vintageBtn.classList.add("header__color-vintage-active");
+  classicBtn.classList.remove("header__color-classic-active");
+
+  // CHANGE COLOR OUTLINE
+  changeOutline("var(--color-secondary)");
+
+  // CHANGE HOVER EFFECT
+  heroOptions.forEach((ele) => {
+    ele.style.setProperty("--source-default", "var(--source-pink)");
+  });
 });
 
 classicBtn.addEventListener("click", () => {
-  document.body.style.backgroundColor = "var(--color-tertiary)";
-  heroSection.style.color = "var(--color-tertiary)";
+  setState("var(--color-tertiary)");
   headerImg.src = "../img/logo/smile_whitepink.png";
-  footerIcon.style.color = "var(--color-tertiary)";
+
+  // CHANGE STATE ACTIVE
+  retroBtn.classList.remove("header__color-retro-active");
+  vintageBtn.classList.remove("header__color-vintage-active");
+  classicBtn.classList.add("header__color-classic-active");
+
+  // CHANGE COLOR OUTLINE
+  changeOutline("var(--color-tertiary)");
+  // CHANGE HOVER EFFECT
+  heroOptions.forEach((ele) => {
+    ele.style.setProperty("--source-default", "var(--source-ecru)");
+  });
 });

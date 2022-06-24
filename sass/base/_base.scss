@@ -11,10 +11,10 @@
   --color-secondary: #f9d3a8;
   --color-tertiary: #fffee6;
 
+  --color-black: #000;
+
   --color-selection: #55c57a;
   --color-white: #fff;
-
-  --color-black: #000;
 
   // Menu subpage
   --color-pale-pink: #ff9c88;
@@ -22,6 +22,15 @@
   --color-coffee: #bfb382;
   --color-cocktails: #eabd01;
   --color-wines: #bac2c0;
+
+  // Color for border button on top page
+  --color-button: #eee200;
+
+  // Link source for hover on index.html
+  --source-default: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-yellow.svg");
+  --source-yellow: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-yellow.svg");
+  --source-pink: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-pink.svg");
+  --source-ecru: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-ecru.svg");
 }
 
 html {

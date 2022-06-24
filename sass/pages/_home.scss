@@ -19,30 +19,35 @@
     line-height: 1.4;
   }
 
+  // CUSTOM
   &__options-list {
+    display: inline-block;
+    overflow: hidden;
+
     &:link,
     &:visited {
       text-decoration: none;
-      font-size: 3.2rem;
-      font-weight: 900;
       color: inherit;
       position: relative;
+      font-size: 3.2rem;
+      font-weight: 900;
+      padding-bottom: 0.7rem;
     }
   }
-  &__options-list:after {
+  &__options-list::before {
     content: "";
     position: absolute;
-    bottom: -0.3rem;
+    bottom: 0;
     left: 0;
-    background-color: var(--color-primary);
-    width: 0rem;
-    height: 0.5rem;
-    border-radius: 11px;
+    background-image: var(--source-default);
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 70rem;
     transition: all 0.5s;
   }
 
-  &__options-list:hover:after {
-    width: 13rem;
+  &__options-list:hover::before {
+    animation: moveWave 5s linear infinite;
   }
 
   &__describe {

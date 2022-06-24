@@ -62,14 +62,19 @@ breakpoint argument choices:
   --color-primary: #eee200;
   --color-secondary: #f9d3a8;
   --color-tertiary: #fffee6;
+  --color-black: #000;
   --color-selection: #55c57a;
   --color-white: #fff;
-  --color-black: #000;
   --color-pale-pink: #ff9c88;
   --color-beer: #ccc5a8;
   --color-coffee: #bfb382;
   --color-cocktails: #eabd01;
   --color-wines: #bac2c0;
+  --color-button: #eee200;
+  --source-default: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-yellow.svg");
+  --source-yellow: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-yellow.svg");
+  --source-pink: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-pink.svg");
+  --source-ecru: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-ecru.svg");
 }
 
 html {
@@ -173,6 +178,7 @@ video {
   height: 100%;
   background-color: inherit;
   border-radius: 100px;
+  outline: 1px solid var(--color-button);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -221,7 +227,7 @@ video {
   height: 100%;
   background-color: inherit;
   border-radius: 100px;
-  outline: 1px solid var(--color-primary);
+  outline: 1px solid var(--color-button);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -270,7 +276,7 @@ video {
   height: 100%;
   background-color: inherit;
   border-radius: 100px;
-  outline: 1px solid var(--color-primary);
+  outline: 1px solid var(--color-button);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -319,7 +325,7 @@ video {
   height: 100%;
   background-color: inherit;
   border-radius: 100px;
-  outline: 1px solid var(--color-primary);
+  outline: 1px solid var(--color-button);
   outline-offset: 2px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -369,7 +375,7 @@ video {
   height: 100%;
   background-color: inherit;
   border-radius: 100px;
-  outline: 1px solid var(--color-primary);
+  outline: 1px solid var(--color-button);
   outline-offset: 2px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -419,7 +425,7 @@ video {
   height: 100%;
   background-color: inherit;
   border-radius: 100px;
-  outline: 1px solid var(--color-primary);
+  outline: 1px solid var(--color-button);
   outline-offset: 2px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -451,6 +457,312 @@ video {
 }
 
 .header__color-classic-active:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__retro-modify {
+  position: relative;
+  background-color: var(--color-primary);
+}
+
+.header__retro-modify::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-black);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__retro-modify::before {
+  content: "RetroYellow";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 40%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__retro-modify:hover::after {
+  height: 8rem;
+}
+
+.header__retro-modify:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__vintage-modify {
+  position: relative;
+  background-color: var(--color-secondary);
+}
+
+.header__vintage-modify::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-black);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__vintage-modify::before {
+  content: "VintageSalmon";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__vintage-modify:hover::after {
+  height: 10rem;
+}
+
+.header__vintage-modify:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__classic-modify {
+  position: relative;
+  background-color: var(--color-tertiary);
+}
+
+.header__classic-modify::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-black);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__classic-modify::before {
+  content: "ClassicEcru";
+  display: inline-block;
+  position: absolute;
+  top: -5%;
+  right: 55%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__classic-modify:hover::after {
+  height: 8rem;
+}
+
+.header__classic-modify:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__retro-active {
+  position: relative;
+}
+
+.header__retro-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-black);
+  -webkit-box-shadow: 0px 0px 0px 1px black;
+          box-shadow: 0px 0px 0px 1px black;
+  outline-offset: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__retro-active::before {
+  content: "RetroYellow";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 40%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__retro-active:hover::after {
+  height: 8rem;
+}
+
+.header__retro-active:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__vintage-active {
+  position: relative;
+}
+
+.header__vintage-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-black);
+  outline-offset: 3px;
+  -webkit-box-shadow: 0px 0px 0px 1px black;
+          box-shadow: 0px 0px 0px 1px black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__vintage-active::before {
+  content: "VintageSalmon";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__vintage-active:hover::after {
+  height: 10rem;
+}
+
+.header__vintage-active:hover::before {
+  color: var(--color-black);
+  visibility: visible;
+}
+
+.header__classic-active {
+  position: relative;
+}
+
+.header__classic-active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100px;
+  outline: 1px solid var(--color-black);
+  outline-offset: 3px;
+  -webkit-box-shadow: 0px 0px 0px 1px black;
+          box-shadow: 0px 0px 0px 1px black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__classic-active::before {
+  content: "ClassicEcru";
+  display: inline-block;
+  position: absolute;
+  top: -5%;
+  right: 55%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 8rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  visibility: hidden;
+  color: transparent;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 10;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header__classic-active:hover::after {
+  height: 8rem;
+}
+
+.header__classic-active:hover::before {
   color: var(--color-black);
   visibility: visible;
 }
@@ -764,11 +1076,6 @@ h4 {
           box-shadow: 0px 0px 0px 1px inset;
 }
 
-.header__item-modify {
-  border: 1px solid var(--color-black);
-  padding: 0.9rem;
-}
-
 .footer {
   color: #111;
   gap: 4.8rem;
@@ -914,29 +1221,36 @@ h4 {
   line-height: 1.4;
 }
 
-.hero__options-list:link, .hero__options-list:visited {
-  text-decoration: none;
-  font-size: 3.2rem;
-  font-weight: 900;
-  color: inherit;
-  position: relative;
+.hero__options-list {
+  display: inline-block;
+  overflow: hidden;
 }
 
-.hero__options-list:after {
+.hero__options-list:link, .hero__options-list:visited {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  font-size: 3.2rem;
+  font-weight: 900;
+  padding-bottom: 0.7rem;
+}
+
+.hero__options-list::before {
   content: "";
   position: absolute;
-  bottom: -0.3rem;
+  bottom: 0;
   left: 0;
-  background-color: var(--color-primary);
-  width: 0rem;
-  height: 0.5rem;
-  border-radius: 11px;
+  background-image: var(--source-default);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 70rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.hero__options-list:hover:after {
-  width: 13rem;
+.hero__options-list:hover::before {
+  -webkit-animation: moveWave 5s linear infinite;
+          animation: moveWave 5s linear infinite;
 }
 
 .hero__describe {

@@ -16,31 +16,38 @@ questionAll.forEach((ele, ind) => {
   });
 });
 
-// CHANGE BACKGROUND-COLOR SUBHOMEPAGE
-const retroBtn = document.querySelector(".header__color-retro");
-const vintageBtn = document.querySelector(".header__color-vintage");
-const classicBtn = document.querySelector(".header__color-classic");
-const heroSection = document.querySelector(".section-hero");
-const headerImg = document.querySelector(".header__img");
-const footerIcon = document.querySelector(".footer__icon");
+// CHANGE BACKGROUND-COLOR SUBHOMEPAGE and UPDATE STATE
 
-retroBtn.addEventListener("click", () => {
+const retroModifyBtn = document.querySelector(".header__retro-modify");
+const vintageModifyBtn = document.querySelector(".header__vintage-modify");
+const classicModifyBtn = document.querySelector(".header__classic-modify");
+
+retroModifyBtn.addEventListener("click", () => {
   document.body.style.backgroundColor = "var(--color-primary)";
-  // heroSection.style.color = "var(--color-primary)";
-  // headerImg.src = "../img/logo/smile_yellow.png";
   footerIcon.style.color = "var(--color-primary)";
+
+  // CHANGE STATE ACTIVE
+  retroModifyBtn.classList.add("header__retro-active");
+  vintageModifyBtn.classList.remove("header__vintage-active");
+  classicModifyBtn.classList.remove("header__classic-active");
 });
 
-vintageBtn.addEventListener("click", () => {
+vintageModifyBtn.addEventListener("click", () => {
   document.body.style.backgroundColor = "var(--color-secondary)";
-  // heroSection.style.color = "var(--color-secondary)";
-  // headerImg.src = "../img/logo/smile_pastel.png";
   footerIcon.style.color = "var(--color-secondary)";
+
+  // CHANGE STATE ACTIVE
+  retroModifyBtn.classList.remove("header__retro-active");
+  vintageModifyBtn.classList.add("header__vintage-active");
+  classicModifyBtn.classList.remove("header__classic-active");
 });
 
-classicBtn.addEventListener("click", () => {
+classicModifyBtn.addEventListener("click", () => {
   document.body.style.backgroundColor = "var(--color-tertiary)";
-  // heroSection.style.color = "var(--color-tertiary)";
-  // headerImg.src = "../img/logo/smile_whitepink.png";
   footerIcon.style.color = "var(--color-tertiary)";
+
+  // CHANGE STATE ACTIVE
+  retroModifyBtn.classList.remove("header__retro-active");
+  vintageModifyBtn.classList.remove("header__vintage-active");
+  classicModifyBtn.classList.add("header__classic-active");
 });
