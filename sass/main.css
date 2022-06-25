@@ -1,4 +1,4 @@
-.faq__content, .footer, .footer__scroll, .footer__time, .footer__meta, .reservation, .reservation__text, .reservation__sale-text {
+.faq__content, .reservation, .reservation__text, .reservation__sale-text, .footer, .footer__scroll, .footer__time, .footer__meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +72,7 @@ breakpoint argument choices:
   --color-wines: #bac2c0;
   --color-button: #eee200;
   --source-default: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-yellow.svg");
+  --source-black: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-black.svg");
   --source-yellow: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-yellow.svg");
   --source-pink: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-pink.svg");
   --source-ecru: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-ecru.svg");
@@ -907,19 +908,25 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10rem;
+  gap: 6rem;
   max-width: 150rem;
   margin: 0 auto;
-  padding: 8rem 12rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 3rem 12rem 8rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__map {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  height: 65vh;
+  -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 
 .contact__main {
@@ -933,6 +940,9 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .contact__time {
@@ -958,6 +968,12 @@ h4 {
 
 .contact__link:hover, .contact__link:active {
   color: #444;
+}
+
+.check-popup {
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 600;
 }
 
 .faq {
@@ -1024,6 +1040,422 @@ h4 {
   opacity: 1;
 }
 
+.reservation {
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 8rem 12rem;
+  gap: 13rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reservation__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10rem;
+}
+
+.reservation__intro p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.reservation__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
+}
+
+.reservation__detail-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
+}
+
+.reservation__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reservation__text .reservation__box {
+  gap: 2rem;
+}
+
+.reservation__box ul {
+  margin-left: 1.8rem;
+}
+
+.reservation__img {
+  border: 4px solid #000;
+  width: 100%;
+}
+
+.reservation__sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
+}
+
+.reservation__sale-text {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reservation__sale .reservation__box {
+  gap: 3.2rem;
+}
+
+.reservation__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.4rem;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+}
+
+.regular-menu,
+.beer-menu,
+.coffee-tea-menu,
+.cocktails-menu,
+.wines-menu {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.8rem;
+}
+
+.dish {
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.dish__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dish p {
+  text-transform: lowercase;
+}
+
+.dish:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.menu__option {
+  list-style: none;
+  line-height: 1.4;
+  position: fixed;
+  top: 20%;
+  left: 8%;
+}
+
+.menu__option-list {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.menu__option-list:link, .menu__option-list:visited {
+  text-decoration: none;
+  color: var(--color-black);
+  position: relative;
+  font-size: 3.2rem;
+  font-weight: 900;
+  padding-bottom: 0.7rem;
+}
+
+.menu__option-list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: var(--source-black);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 70rem;
+  visibility: hidden;
+  -webkit-transition: visibility 1s;
+  transition: visibility 1s;
+  -webkit-transition: -webkit-animation 0.5s;
+  transition: -webkit-animation 0.5s;
+  transition: animation 0.5s;
+  transition: animation 0.5s, -webkit-animation 0.5s;
+}
+
+.menu__option-list:hover::before {
+  visibility: visible;
+  -webkit-animation: moveWave 5s linear infinite;
+          animation: moveWave 5s linear infinite;
+}
+
+.menu__option-modify::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: var(--source-black);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 70rem;
+  visibility: visible;
+}
+
+aside {
+  position: fixed;
+  top: 20%;
+  right: 3%;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 800;
+  width: 21%;
+  letter-spacing: -0.75px;
+}
+
+.wines-menu .menu-first {
+  position: relative;
+}
+
+.wine-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 3%;
+}
+
+/* MAIN WINE*/
+/**************************/
+.menu-btn {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: var(--color-black);
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
+.menu-btn::before {
+  content: "";
+  display: block;
+  padding: 3.2rem;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  position: relative;
+  z-index: -10;
+}
+
+.menu-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.74px;
+  z-index: 10;
+}
+
+.main {
+  color: var(--color-black);
+}
+
+.wine__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
+  padding: 0 12rem;
+}
+
+.wine__detail div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.wine__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wine__text h2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.wine__advise {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 0.5fr 1.5fr;
+      grid-template-columns: 1.5fr 0.5fr 1.5fr;
+  -ms-grid-rows: 0.5fr 2fr 0.5fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+      grid-template-areas: "advise advise first_img" "second_img . first_img" "second_img recommend recommend";
+  gap: 8rem;
+  padding: 12rem;
+}
+
+.wine__gift {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: second_img;
+}
+
+.wine__glass {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: first_img;
+}
+
+.wine__img {
+  border: 4px solid var(--color-black);
+  width: 100%;
+}
+
+.wine__box {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.wine__box-gift {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: advise;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.wine__box-glass {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: recommend;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.wine-detail__text .wine-advise {
+  height: 70rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: var(--color-secondary);
+  width: 100vw;
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-black);
+}
+
+.navigation__btn {
+  position: relative;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 100px;
+  background-color: var(--color-black);
+  cursor: pointer;
+  z-index: 59;
+}
+
+.navigation__btn::before {
+  content: "Menu";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-left: 0.1rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1032,6 +1464,8 @@ h4 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 4rem 4rem;
+  position: relative;
+  z-index: 51;
 }
 
 .header__img {
@@ -1218,7 +1652,7 @@ h4 {
 .hero__options {
   list-style: none;
   padding-left: 10rem;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .hero__options-list {
@@ -1244,13 +1678,31 @@ h4 {
   background-repeat: no-repeat;
   height: 1rem;
   width: 70rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  visibility: hidden;
+  -webkit-transition: visibility 1s;
+  transition: visibility 1s;
+  -webkit-transition: -webkit-animation 0.5s;
+  transition: -webkit-animation 0.5s;
+  transition: animation 0.5s;
+  transition: animation 0.5s, -webkit-animation 0.5s;
 }
 
 .hero__options-list:hover::before {
+  visibility: visible;
   -webkit-animation: moveWave 5s linear infinite;
           animation: moveWave 5s linear infinite;
+}
+
+.hero__options-modify::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: var(--source-default);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 70rem;
+  visibility: visible;
 }
 
 .hero__describe {
@@ -1380,349 +1832,5 @@ h4 {
   grid-row: span 2;
   -ms-grid-column-align: start;
       justify-self: start;
-}
-
-.reservation {
-  max-width: 150rem;
-  margin: 0 auto;
-  padding: 8rem 12rem;
-  gap: 13rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.reservation__intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 10rem;
-}
-
-.reservation__intro p {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.reservation__detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10rem;
-}
-
-.reservation__detail-img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 65%;
-          flex: 0 1 65%;
-}
-
-.reservation__text {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 35%;
-          flex: 0 1 35%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.reservation__text .reservation__box {
-  gap: 2rem;
-}
-
-.reservation__box ul {
-  margin-left: 1.8rem;
-}
-
-.reservation__img {
-  border: 4px solid #000;
-  width: 100%;
-}
-
-.reservation__sale {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10rem;
-}
-
-.reservation__sale-text {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.reservation__sale .reservation__box {
-  gap: 3.2rem;
-}
-
-.reservation__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1.4rem;
-}
-
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #000;
-}
-
-.regular-menu,
-.beer-menu,
-.coffee-tea-menu,
-.cocktails-menu,
-.wines-menu {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 4.8rem;
-}
-
-.dish {
-  padding-bottom: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-.dish__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.dish p {
-  text-transform: lowercase;
-}
-
-.dish:not(:last-child) {
-  border-bottom: 1px solid #000;
-}
-
-.menu__option {
-  list-style: none;
-  line-height: 1.4;
-  position: fixed;
-  top: 20%;
-  left: 8%;
-}
-
-.menu__option-list:link, .menu__option-list:visited {
-  text-decoration: none;
-  font-size: 3.2rem;
-  font-weight: 900;
-  color: #000;
-  position: relative;
-}
-
-.menu__option-list:after {
-  content: "";
-  position: absolute;
-  bottom: -0.3rem;
-  left: 0;
-  background-color: #000;
-  width: 0rem;
-  height: 0.5rem;
-  border-radius: 11px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.menu__option-list:hover:after, .menu__option-list:active:after {
-  width: 13rem;
-}
-
-aside {
-  position: fixed;
-  top: 20%;
-  right: 3%;
-  color: #000;
-  font-size: 1.8rem;
-  font-weight: 800;
-  width: 21%;
-  letter-spacing: -0.75px;
-}
-
-.wines-menu .menu-first {
-  position: relative;
-}
-
-.wine-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 3%;
-}
-
-/* MAIN WINE*/
-/**************************/
-.menu-btn {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  color: var(--color-black);
-}
-
-.menu-btn:hover {
-  cursor: pointer;
-}
-
-.menu-btn::before {
-  content: "";
-  display: block;
-  padding: 3.2rem;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  position: relative;
-  z-index: -10;
-}
-
-.menu-btn span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: var(--color-primary);
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.74px;
-  z-index: 10;
-}
-
-.main {
-  color: var(--color-black);
-}
-
-.wine__detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10rem;
-  padding: 0 12rem;
-}
-
-.wine__detail div {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-}
-
-.wine__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.wine__text h2 {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.wine__advise {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1.5fr 0.5fr 1.5fr;
-      grid-template-columns: 1.5fr 0.5fr 1.5fr;
-  -ms-grid-rows: 0.5fr 2fr 0.5fr;
-      grid-template-rows: 0.5fr 2fr 0.5fr;
-      grid-template-areas: "advise advise first_img" "second_img . first_img" "second_img recommend recommend";
-  gap: 8rem;
-  padding: 12rem;
-}
-
-.wine__gift {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: second_img;
-}
-
-.wine__glass {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  grid-area: first_img;
-}
-
-.wine__img {
-  border: 4px solid var(--color-black);
-  width: 100%;
-}
-
-.wine__box {
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.wine__box-gift {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: advise;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-}
-
-.wine__box-glass {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: recommend;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-}
-
-.wine-detail__text .wine-advise {
-  height: 70rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
 }
 /*# sourceMappingURL=main.css.map */
