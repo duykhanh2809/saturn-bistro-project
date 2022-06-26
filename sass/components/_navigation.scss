@@ -1,37 +1,140 @@
-.navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  background-color: var(--color-secondary);
-  width: 100vw;
-  height: 50rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--color-black);
+.main {
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    width: 100vw;
+    height: 55rem;
+    color: var(--color-black);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 2fr);
+    row-gap: 10rem;
+    padding: 15rem 20rem;
+    z-index: 8;
+    transform: translateY(-100%);
+    transition: all 1s;
+  }
 
-  &__btn {
+  &__nav-active {
+    transform: translateY(0);
+  }
+
+  &__btn-open {
     position: relative;
     height: 6rem;
     width: 6rem;
     border-radius: 100px;
     background-color: var(--color-black);
     cursor: pointer;
-    z-index: 59;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: 100;
 
     &::before {
       content: "Menu";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @extend %absolute-center;
       margin-left: 0.1rem;
       text-transform: uppercase;
       font-size: 1.3rem;
       font-weight: 900;
       letter-spacing: 1px;
       text-align: center;
+      color: var(--color-primary);
+    }
+  }
+
+  &__btn-close {
+    position: relative;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100px;
+    background-color: var(--color-black);
+    cursor: pointer;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: 100;
+
+    // Tren giong han
+  }
+
+  &__btn-icon {
+    @extend %absolute-center;
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+
+  &__options {
+    grid-row: 1/-1;
+    justify-self: start;
+    list-style: none;
+  }
+
+  &__options-list {
+    &:link,
+    &:visited {
+      @extend %options-list;
+
+      // CUSTOM
+      display: inline-block;
+      overflow: hidden;
+      line-height: 1.1;
+    }
+  }
+
+  &__options-list::before {
+    content: "";
+    @extend %absolute;
+
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 70rem;
+    visibility: hidden;
+    transition: visibility 1s;
+    transition: animation 0.5s;
+    // CUSTOM
+    background-image: var(--source-black);
+  }
+
+  &__options-list:hover::before {
+    visibility: visible;
+    animation: moveWave 6s linear infinite;
+  }
+
+  &__options-modify::before {
+    content: "";
+    @extend %absolute;
+    background-image: var(--source-black);
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 70rem;
+    visibility: visible;
+  }
+
+  &__time {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    justify-self: start;
+    padding-left: 20rem;
+    div {
+      display: flex;
+      gap: 6rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__contact {
+    font-size: 1.6rem;
+    font-weight: 800;
+    justify-self: start;
+    padding-left: 20rem;
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: var(--color-black);
     }
   }
 }

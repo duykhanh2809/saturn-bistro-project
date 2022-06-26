@@ -3,6 +3,19 @@
   flex-direction: column;
 }
 
+%absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+%absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 %link-direct {
   display: inline-block;
   overflow: hidden;
@@ -29,6 +42,15 @@
   &:hover::before {
     animation: moveWave 4s linear infinite;
   }
+}
+
+%options-list {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  font-size: 3.2rem;
+  font-weight: 900;
+  padding-bottom: 0.7rem;
 }
 
 @mixin widthLinkDirect($widthSet) {

@@ -26,19 +26,12 @@
 
     &:link,
     &:visited {
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      font-size: 3.2rem;
-      font-weight: 900;
-      padding-bottom: 0.7rem;
+      @extend %options-list;
     }
   }
   &__options-list::before {
     content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @extend %absolute;
     background-image: var(--source-default);
     background-repeat: no-repeat;
     height: 1rem;
