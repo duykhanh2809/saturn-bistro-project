@@ -9,6 +9,12 @@
   left: 0;
 }
 
+%absolute-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 %absolute-center {
   position: absolute;
   top: 50%;
@@ -51,6 +57,18 @@
   font-size: 3.2rem;
   font-weight: 900;
   padding-bottom: 0.7rem;
+}
+
+%main-menu-btn {
+  position: relative;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 100px;
+  background-color: var(--color-black);
+  cursor: pointer;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  z-index: 100;
 }
 
 @mixin widthLinkDirect($widthSet) {

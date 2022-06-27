@@ -1,0 +1,27 @@
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--color-primary);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__img {
+    // align-self: center;
+    height: 6vw;
+    width: 6vw;
+    animation: loading 1.2s infinite linear;
+  }
+
+  &__text {
+    color: var(--color-black);
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}

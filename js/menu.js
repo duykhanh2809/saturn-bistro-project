@@ -1,21 +1,7 @@
 "use strict";
 
-// CHANGE BACKGROUND-COLOR MENUPAGE
-const bodyClasslist = document.body.classList;
-
-if (bodyClasslist.contains("regular-body")) {
-  document.body.style.backgroundColor = "var(--color-pale-pink)";
-} else if (bodyClasslist.contains("beer-body")) {
-  document.body.style.backgroundColor = "var(--color-beer)";
-} else if (bodyClasslist.contains("coffee-body")) {
-  document.body.style.backgroundColor = "var(--color-coffee)";
-} else if (bodyClasslist.contains("cocktails-body")) {
-  document.body.style.backgroundColor = "var(--color-cocktails)";
-} else if (bodyClasslist.contains("wines-body")) {
-  document.body.style.backgroundColor = "var(--color-wines)";
-}
-
 // BACKGROUND-MENU HOVER CHANGE
+
 const optionList = document.querySelectorAll(".menu__option-list");
 const colorBodyMenu = [
   "--color-pale-pink",
@@ -31,40 +17,42 @@ optionList.forEach((ele, ind) => {
   });
 });
 
-// CHANGE BACKGROUND-COLOR MENUPAGE
-
-retroBtn.addEventListener("click", () => {
-  headerImg.src = "../img/logo/smile_yellow.png";
-  footerIcon.style.color = "var(--color-primary)";
-
-  // CHANGE STATE
-  retroBtn.classList.add("header__color-retro-active");
-  vintageBtn.classList.remove("header__color-vintage-active");
-  classicBtn.classList.remove("header__color-classic-active");
-
-  changeOutline("var(--color-primary)");
+// ACTIVE MENU BUTTON
+mainBtnOpen.addEventListener("click", () => {
+  setMainNav();
+  disableScroll();
 });
 
-vintageBtn.addEventListener("click", () => {
-  headerImg.src = "../img/logo/smile_pastel.png";
-  footerIcon.style.color = "var(--color-secondary)";
-
-  // CHANGE STATE
-  retroBtn.classList.remove("header__color-retro-active");
-  vintageBtn.classList.add("header__color-vintage-active");
-  classicBtn.classList.remove("header__color-classic-active");
-
-  changeOutline("var(--color-secondary)");
+mainBtnClose.addEventListener("click", () => {
+  setMainNav();
+  enableScroll();
 });
 
-classicBtn.addEventListener("click", () => {
-  headerImg.src = "../img/logo/smile_whitepink.png";
-  footerIcon.style.color = "var(--color-tertiary)";
+// CHANGE BACKGROUND-COLOR SUBHOMEPAGE and UPDATE STATE
 
-  // CHANGE STATE
-  retroBtn.classList.remove("header__color-retro-active");
-  vintageBtn.classList.remove("header__color-vintage-active");
-  classicBtn.classList.add("header__color-classic-active");
+retroModifyBtn.addEventListener("click", () => {
+  // CHANGE STATE ACTIVE
+  retroModifyBtn.classList.add("header__retro-active");
+  vintageModifyBtn.classList.remove("header__vintage-active");
+  classicModifyBtn.classList.remove("header__classic-active");
 
-  changeOutline("var(--color-tertiary)");
+  setStateSubPage("var(--color-primary)");
+});
+
+vintageModifyBtn.addEventListener("click", () => {
+  // CHANGE STATE ACTIVE
+  retroModifyBtn.classList.remove("header__retro-active");
+  vintageModifyBtn.classList.add("header__vintage-active");
+  classicModifyBtn.classList.remove("header__classic-active");
+
+  setStateSubPage("var(--color-secondary)");
+});
+
+classicModifyBtn.addEventListener("click", () => {
+  // CHANGE STATE ACTIVE
+  retroModifyBtn.classList.remove("header__retro-active");
+  vintageModifyBtn.classList.remove("header__vintage-active");
+  classicModifyBtn.classList.add("header__classic-active");
+
+  setStateSubPage("var(--color-tertiary)");
 });

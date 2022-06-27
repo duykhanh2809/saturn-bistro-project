@@ -1,0 +1,19 @@
+{
+  "name": "project_plus_saturnbistro",
+  "version": "1.0.0",
+  "description": "Project 01 - NDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.8.0",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}

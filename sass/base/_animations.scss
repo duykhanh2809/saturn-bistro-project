@@ -7,6 +7,16 @@
   }
 }
 
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 // KHAC VE TEXT, TOP, RIGHT, HEIGHT
 
 .header__color-retro {
@@ -15,15 +25,12 @@
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
     border-radius: 100px;
     outline: 1px solid var(--color-button);
-    // outline-offset: 2px;
     transition: all 0.5s;
   }
   &::before {
@@ -58,15 +65,12 @@
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
     border-radius: 100px;
     outline: 1px solid var(--color-button);
-    // outline-offset: 2px;
     transition: all 0.5s;
   }
   &::before {
@@ -101,15 +105,12 @@
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
     border-radius: 100px;
     outline: 1px solid var(--color-button);
-    // outline-offset: 2px;
     transition: all 0.5s;
   }
   &::before {
@@ -139,14 +140,10 @@
 }
 
 .header__color-retro-active {
-  position: relative;
-
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -155,41 +152,17 @@
     outline-offset: 2px;
     transition: all 0.5s;
   }
-  &::before {
-    content: "RetroYellow";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 40%;
-    width: max-content;
-    height: 8rem;
-    transform: rotate(90deg);
-    visibility: hidden;
-    color: transparent;
-    font-weight: 400;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.25s;
-  }
+
   &:hover::after {
     height: 8rem;
-  }
-
-  &:hover::before {
-    color: var(--color-black);
-    visibility: visible;
   }
 }
 
 .header__color-vintage-active {
-  position: relative;
-
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -198,41 +171,17 @@
     outline-offset: 2px;
     transition: all 0.5s;
   }
-  &::before {
-    content: "VintageSalmon";
-    display: inline-block;
-    position: absolute;
-    top: 40%;
-    right: 0;
-    width: max-content;
-    height: 8rem;
-    transform: rotate(90deg);
-    visibility: hidden;
-    color: transparent;
-    font-weight: 400;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.25s;
-  }
+
   &:hover::after {
     height: 10rem;
-  }
-
-  &:hover::before {
-    color: var(--color-black);
-    visibility: visible;
   }
 }
 
 .header__color-classic-active {
-  position: relative;
-
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -241,29 +190,9 @@
     outline-offset: 2px;
     transition: all 0.5s;
   }
-  &::before {
-    content: "ClassicEcru";
-    display: inline-block;
-    position: absolute;
-    top: -5%;
-    right: 55%;
-    width: max-content;
-    height: 8rem;
-    transform: rotate(90deg);
-    visibility: hidden;
-    color: transparent;
-    font-weight: 400;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.25s;
-  }
+
   &:hover::after {
     height: 8rem;
-  }
-
-  &:hover::before {
-    color: var(--color-black);
-    visibility: visible;
   }
 }
 
@@ -276,9 +205,7 @@
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -321,9 +248,7 @@
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -366,9 +291,7 @@
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -404,14 +327,10 @@
 }
 
 .header__retro-active {
-  position: relative;
-
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -423,41 +342,17 @@
     //
     transition: all 0.3s;
   }
-  &::before {
-    content: "RetroYellow";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 40%;
-    width: max-content;
-    height: 8rem;
-    transform: rotate(90deg);
-    visibility: hidden;
-    color: transparent;
-    font-weight: 400;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.25s;
-  }
+
   &:hover::after {
     height: 8rem;
-  }
-
-  &:hover::before {
-    color: var(--color-black);
-    visibility: visible;
   }
 }
 
 .header__vintage-active {
-  position: relative;
-
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -469,41 +364,17 @@
     //
     transition: all 0.3s;
   }
-  &::before {
-    content: "VintageSalmon";
-    display: inline-block;
-    position: absolute;
-    top: 40%;
-    right: 0;
-    width: max-content;
-    height: 8rem;
-    transform: rotate(90deg);
-    visibility: hidden;
-    color: transparent;
-    font-weight: 400;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.25s;
-  }
+
   &:hover::after {
     height: 10rem;
-  }
-
-  &:hover::before {
-    color: var(--color-black);
-    visibility: visible;
   }
 }
 
 .header__classic-active {
-  position: relative;
-
   &::after {
     content: "";
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %absolute-top-left;
     width: 100%;
     height: 100%;
     background-color: inherit;
@@ -515,28 +386,8 @@
     //
     transition: all 0.5s;
   }
-  &::before {
-    content: "ClassicEcru";
-    display: inline-block;
-    position: absolute;
-    top: -5%;
-    right: 55%;
-    width: max-content;
-    height: 8rem;
-    transform: rotate(90deg);
-    visibility: hidden;
-    color: transparent;
-    font-weight: 400;
-    font-size: 1.2rem;
-    z-index: 10;
-    transition: all 0.25s;
-  }
+
   &:hover::after {
     height: 8rem;
-  }
-
-  &:hover::before {
-    color: var(--color-black);
-    visibility: visible;
   }
 }

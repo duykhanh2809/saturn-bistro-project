@@ -57,9 +57,7 @@
   }
   &-list::before {
     content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @extend %absolute;
     background-image: var(--source-black);
     background-repeat: no-repeat;
     height: 1rem;
@@ -75,9 +73,7 @@
   }
   &-modify::before {
     content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    @extend %absolute;
     background-image: var(--source-black);
     background-repeat: no-repeat;
     height: 1rem;

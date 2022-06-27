@@ -16,30 +16,95 @@
     <script defer src="../js/menu.js"></script>
     <title>Saturn Bistro</title>
   </head>
-  <body class="regular-body">
+  <body class="regular-body" style="background-color: var(--color-pale-pink)">
+    <div class="loading">
+      <p class="loading__text">Project Saturn Bistro - Duy Khanh</p>
+      <img
+        src="../img/logo/smile_fullsize.png"
+        alt="The bistro's logo"
+        class="loading__img"
+      />
+    </div>
     <header>
       <div class="container header">
         <a href="../index.html"
           ><img
-            src="../img/logo/smile_yellow.png"
+            src="../img/logo/smile_fullsize.png"
             alt="the bistro's logo"
             class="header__img"
         /></a>
+        <!-- BUTTON NAVIGATION -->
+        <div class="main__btn-open"></div>
+        <div class="main__btn-close hidden">
+          <i class="ph-x main__btn-icon"></i>
+        </div>
+
+        <!--  -->
         <nav class="header__nav">
           <ul class="header__color">
             <li>
               <span
-                class="header__item header__color-retro header__color-retro-active"
+                class="header__item header__retro-modify header__retro-active"
               ></span>
             </li>
             <li>
-              <span class="header__item header__color-vintage"></span>
+              <span class="header__item header__vintage-modify"></span>
             </li>
             <li>
-              <span class="header__item header__color-classic"></span>
+              <span class="header__item header__classic-modify"></span>
             </li>
           </ul>
         </nav>
+      </div>
+      <div class="main__nav">
+        <ul class="main__options">
+          <li>
+            <a
+              href="regular-menu.html"
+              class="main__options-list main__options-modify"
+              >thực đơn</a
+            >
+          </li>
+          <li>
+            <a href="main-wine.html" class="main__options-list">rượu</a>
+          </li>
+          <li>
+            <a href="../index.html#describe-section" class="main__options-list"
+              >ý tưởng</a
+            >
+          </li>
+          <li>
+            <a href="reservation.html" class="main__options-list">đặt bàn</a>
+          </li>
+          <li>
+            <a href="faq.html" class="main__options-list">FAQ</a>
+          </li>
+          <li>
+            <a href="contact.html" class="main__options-list">liên hệ</a>
+          </li>
+        </ul>
+        <div class="main__time">
+          <div>
+            <span>Thứ 2 - Thứ 5</span>
+            <span>14:00-22:00</span>
+          </div>
+          <div>
+            <span>Thứ 6 - Thứ 7</span>
+            <span>14:00-00:00</span>
+          </div>
+          <div>
+            <span>Chủ nhật</span>
+            <span>14:00-21:00</span>
+          </div>
+        </div>
+        <div class="main__contact">
+          <p>+ 0123456789 (VN)</p>
+          <a
+            href="mailto:khanh.nguyenduy@hcmut.edu.com"
+            class="main__contact-link"
+            >khanh.nguyenduy@hcmut.edu.vn</a
+          >
+        </div>
       </div>
     </header>
     <main>
@@ -266,5 +331,6 @@
         </div>
       </div>
     </footer>
+    <div class="modal"></div>
   </body>
 </html>

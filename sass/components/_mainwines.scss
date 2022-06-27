@@ -1,44 +1,5 @@
 /* MAIN WINE*/
 /**************************/
-.menu-btn {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--color-black);
-}
-
-.menu-btn:hover {
-  cursor: pointer;
-}
-
-.menu-btn::before {
-  content: "";
-  display: block;
-  padding: 3.2rem;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  position: relative;
-  z-index: -10;
-}
-
-.menu-btn span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--color-primary);
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.74px;
-  z-index: 10;
-}
-
-.main {
-  color: var(--color-black);
-}
-
 .wine {
   &__detail {
     display: flex;
@@ -97,6 +58,42 @@
       align-self: end;
     }
   }
+}
+
+.menu-btn {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-black);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding: 3.2rem;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    position: relative;
+    z-index: -10;
+  }
+
+  span {
+    @extend %absolute-center;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.74px;
+    z-index: 10;
+  }
+}
+
+.main {
+  color: var(--color-black);
 }
 
 .wine-detail__text .wine-advise {
