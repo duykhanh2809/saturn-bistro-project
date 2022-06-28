@@ -19,6 +19,17 @@ const changeOutline = function (colorToConvert) {
   classicBtn.style.setProperty("--color-button", colorToConvert);
 };
 
+// ACTIVE MENU BUTTON
+mainBtnOpen.addEventListener("click", () => {
+  setMainNav();
+  disableScroll();
+});
+
+mainBtnClose.addEventListener("click", () => {
+  setMainNav();
+  enableScroll();
+});
+
 // CHANGE STATE ON HOMEPAGE
 
 const heroOptions = document.querySelectorAll(".hero__options-list");

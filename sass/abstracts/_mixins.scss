@@ -68,7 +68,7 @@
   cursor: pointer;
   grid-column: 1/-1;
   grid-row: 1/2;
-  z-index: 100;
+  z-index: 99;
 }
 
 @mixin widthLinkDirect($widthSet) {
@@ -89,29 +89,3 @@ breakpoint argument choices:
 - tab-land
 - big-desktop
 */
-@mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
-      //600px
-      @content;
-    }
-  }
-  @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
-      //900px
-      @content;
-    }
-  }
-  @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
-      //1200px
-      @content;
-    }
-  }
-  @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
-      //1800px
-      @content;
-    }
-  }
-}

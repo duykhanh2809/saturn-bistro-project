@@ -13,6 +13,14 @@
     z-index: 8;
     transform: translateY(-100%);
     transition: all 1s;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 100vh;
+      padding: 15rem 10rem;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 20rem;
+      column-gap: 5rem;
+    }
   }
 
   &__nav-active {
@@ -49,6 +57,11 @@
     grid-row: 1/-1;
     justify-self: start;
     list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+      grid-row: 1 / span 2;
+    }
   }
 
   &__options-list {
@@ -60,6 +73,11 @@
       display: inline-block;
       overflow: hidden;
       line-height: 1.1;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 4.6rem;
+        line-height: 1.02;
+      }
     }
   }
 
@@ -98,6 +116,13 @@
     font-weight: 600;
     justify-self: start;
     padding-left: 20rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 0;
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
     div {
       display: flex;
       gap: 6rem;
@@ -110,6 +135,13 @@
     font-weight: 800;
     justify-self: start;
     padding-left: 20rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 0;
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+
     &-link:link,
     &-link:visited {
       text-decoration: none;

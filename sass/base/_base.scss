@@ -34,20 +34,23 @@
   --source-ecru: url("https://punkt-gdynia.pl/wp-content/themes/wp-punkt/img/wave-ecru.svg");
 }
 
+// Using Sass instead CSS custom property
+$bp-largest: 75em; // 1200px
+$bp-large: 56.25em; // 900px
+$bp-medium: 46.875em; // 750px
+$bp-small: 34.375em; // 550px
+
 html {
   font-size: 62.5%;
 
-  @include respond(tab-land) {
-    // width < 1200px
-    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 56.25%;
   }
-  @include respond(tab-port) {
-    // width < 900px
-    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
   }
-
-  @include respond(big-desktop) {
-    font-size: 75%; // 1rem = 12px, 12/16
+  @media only screen and (max-width: $bp-small) {
+    font-size: 75%;
   }
 }
 
@@ -55,11 +58,6 @@ body {
   box-sizing: border-box;
   background-color: var(--color-primary);
   overflow-x: hidden;
-
-  @include respond(tab-port) {
-    // width < 900px
-    padding: 0;
-  }
 
   // CHANGE backgroundColor menu
   transition: background-color 0.5s;
@@ -69,6 +67,17 @@ body {
   max-width: 150rem;
   margin: 0 auto;
   padding: 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 6rem;
+  }
+}
+
+.main {
+  padding-top: 15rem;
+  &-menu {
+    padding-top: 20rem;
+  }
 }
 
 ::selection {
@@ -80,12 +89,13 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 68rem;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   display: block;
   z-index: -2;
   overflow: hidden;
+  filter: brightness(80%);
 }
 
 .modal {

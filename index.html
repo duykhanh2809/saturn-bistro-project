@@ -33,6 +33,13 @@
             alt="the bistro's logo"
             class="header__img"
         /></a>
+        <!-- BUTTON NAVIGATION -->
+        <div class="main__btn-open"></div>
+        <div class="main__btn-close hidden">
+          <i class="ph-x main__btn-icon"></i>
+        </div>
+
+        <!--  -->
         <nav class="header__nav">
           <ul class="header__color">
             <li>
@@ -49,11 +56,59 @@
           </ul>
         </nav>
       </div>
+      <div class="main__nav">
+        <ul class="main__options">
+          <li>
+            <a href="regular-menu.html" class="main__options-list">thực đơn</a>
+          </li>
+          <li>
+            <a href="main-wine.html" class="main__options-list">rượu</a>
+          </li>
+          <li>
+            <a
+              href="../index.html#describe-section"
+              class="main__options-list main__options-modify"
+              >ý tưởng</a
+            >
+          </li>
+          <li>
+            <a href="reservation.html" class="main__options-list">đặt bàn</a>
+          </li>
+          <li>
+            <a href="faq.html" class="main__options-list">FAQ</a>
+          </li>
+          <li>
+            <a href="contact.html" class="main__options-list">liên hệ</a>
+          </li>
+        </ul>
+        <div class="main__time">
+          <div>
+            <span>Thứ 2 - Thứ 5</span>
+            <span>14:00-22:00</span>
+          </div>
+          <div>
+            <span>Thứ 6 - Thứ 7</span>
+            <span>14:00-00:00</span>
+          </div>
+          <div>
+            <span>Chủ nhật</span>
+            <span>14:00-21:00</span>
+          </div>
+        </div>
+        <div class="main__contact">
+          <p>+ 0123456789 (VN)</p>
+          <a
+            href="mailto:khanh.nguyenduy@hcmut.edu.com"
+            class="main__contact-link"
+            >khanh.nguyenduy@hcmut.edu.vn</a
+          >
+        </div>
+      </div>
     </header>
     <main>
       <section class="section-hero">
         <video
-          src="video\pexels-lachlan-ross-7084478.mp4"
+          src="video\punkt_home.mp4"
           type="video/mp4"
           autoplay
           loop
@@ -132,7 +187,7 @@
         </div>
       </section>
       <section class="section-describe" id="describe-section">
-        <div class="container grid--2-cols describe">
+        <div class="container describe">
           <div class="describe__image-first">
             <img
               src="img\homepage1.jpg"
