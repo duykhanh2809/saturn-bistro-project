@@ -7,12 +7,32 @@
   justify-content: space-around;
   align-items: center;
 
+  @media only screen and (max-width: $bp-largest) {
+    gap: 4rem;
+    padding: 3rem 8rem 8rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+
   &__map {
     flex: 0 0 50%;
     height: 65vh;
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.15);
     border-radius: 5px;
     z-index: -99;
+
+    @media only screen and (max-width: $bp-largest) {
+      height: 60vh;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      height: 45vh;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      position: initial;
+    }
   }
 
   &__main {

@@ -12,6 +12,10 @@ body {
   font-size: 6rem;
   font-weight: 900;
   color: var(--color-black);
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 4.4rem;
+  }
 }
 
 .heading-tertiary {
@@ -43,10 +47,19 @@ body {
   font-weight: 900;
   color: var(--color-black);
   text-align: center;
+
   &-modify {
     display: flex;
     justify-content: center;
     gap: 0.75rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
   }
 }
 

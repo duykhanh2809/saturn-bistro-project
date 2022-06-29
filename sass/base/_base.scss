@@ -44,13 +44,13 @@ html {
   font-size: 62.5%;
 
   @media only screen and (max-width: $bp-largest) {
-    font-size: 56.25%;
+    font-size: 56.25%; // 10px
   }
   @media only screen and (max-width: $bp-large) {
-    font-size: 50%;
+    font-size: 50%; // 9px
   }
   @media only screen and (max-width: $bp-small) {
-    font-size: 75%;
+    font-size: 75%; // 12px
   }
 }
 
@@ -70,6 +70,10 @@ body {
 
   @media only screen and (max-width: $bp-medium) {
     padding: 6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 2rem 3rem;
   }
 }
 

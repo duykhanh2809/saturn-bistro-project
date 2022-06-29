@@ -7,6 +7,17 @@
   &__info {
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__info {
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
   }
 
   &__nav {
@@ -21,6 +32,10 @@
       color: inherit;
       font-size: 2.2rem;
       font-weight: 600;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2.6rem;
+      }
     }
     &:hover,
     &:active {
@@ -69,6 +84,10 @@
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 600;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
   }
 
   &__meta {
@@ -86,8 +105,19 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+      justify-items: start;
+    }
+
     & .copyright {
       justify-self: end;
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        justify-self: start;
+      }
     }
   }
 
@@ -99,6 +129,10 @@
       color: inherit;
       font-size: 2.2rem;
       font-weight: 600;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2.8rem;
+        font-weight: 800;
+      }
     }
     &:hover,
     &:active {
@@ -124,6 +158,11 @@
     @media only screen and (max-width: $bp-medium) {
       grid-row: 2 / 3;
       grid-column: 1/-1;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+      text-align: left;
+      grid-row: 3/4;
     }
   }
 }

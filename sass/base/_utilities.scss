@@ -23,6 +23,10 @@
   text-align: right;
   margin-bottom: 2rem;
   margin-top: -4rem;
+  padding-right: 12rem;
+  @media only screen and (max-width: $bp-large) {
+    padding: 0;
+  }
 }
 
 .link__direct {
