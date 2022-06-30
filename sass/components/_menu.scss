@@ -14,6 +14,14 @@
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex: 0 1 60%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex: 0 1 83%;
+  }
 }
 
 .dish {
@@ -39,6 +47,15 @@
   top: 29%;
   left: 8%;
 
+  @media only screen and (max-width: $bp-largest) {
+    left: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    position: initial;
+    order: -2;
+  }
+
   // CUSTOM
   &-list {
     display: inline-block;
@@ -53,6 +70,15 @@
       font-size: 3.2rem;
       font-weight: 900;
       padding-bottom: 0.7rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 2.4rem;
+        line-height: 1.1;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 3.4rem;
+      }
     }
   }
   &-list::before {
@@ -91,6 +117,21 @@ aside {
   font-weight: 800;
   width: 21%;
   letter-spacing: -0.75px;
+
+  @media only screen and (max-width: $bp-largest) {
+    right: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    position: initial;
+    order: -1;
+    font-size: 1.6rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    order: 1;
+    flex: 1;
+    padding: 2rem 3rem;
+  }
 }
 
 .wines-menu .menu-first {
@@ -102,4 +143,26 @@ aside {
   top: 0;
   right: 0;
   max-width: 3%;
+}
+
+// Custom
+.main-menu {
+  padding-top: 20rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: space-around;
+    padding-top: 15rem;
+
+    .menu {
+      flex: 0 1 100%;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-top: 12rem;
+  }
 }

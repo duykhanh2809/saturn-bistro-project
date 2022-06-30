@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/logo/smile_favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +15,7 @@
     <script defer src="https://unpkg.com/phosphor-icons"></script>
     <script defer src="../js/general.js"></script>
     <script defer src="../js/menu.js"></script>
-    <title>Saturn Bistro</title>
+    <title>wine menu - saturn.</title>
   </head>
   <body class="wines-body" style="background-color: var(--color-wines)">
     <div class="loading">
@@ -34,9 +35,11 @@
             class="header__img"
         /></a>
         <!-- BUTTON NAVIGATION -->
-        <div class="main__btn-open"></div>
-        <div class="main__btn-close hidden">
-          <i class="ph-x main__btn-icon"></i>
+        <div class="header__btn">
+          <div class="main__btn-open"></div>
+          <div class="main__btn-close hidden">
+            <i class="ph-x main__btn-icon"></i>
+          </div>
         </div>
 
         <!--  -->
@@ -415,31 +418,29 @@
           </div>
         </div>
       </div>
-      <div>
-        <ul class="menu__option">
-          <li>
-            <a href="regular-menu.html" class="menu__option-list"
-              >regular menu</a
-            >
-          </li>
-          <li>
-            <a href="beer-menu.html" class="menu__option-list">drinks/beer</a>
-          </li>
-          <li>
-            <a href="coffee-tea-menu.html" class="menu__option-list"
-              >coffee/tea</a
-            >
-          </li>
-          <li>
-            <a href="cocktails.html" class="menu__option-list">cocktails</a>
-          </li>
-          <li>
-            <a href="wines.html" class="menu__option-list menu__option-modify"
-              >wines</a
-            >
-          </li>
-        </ul>
-      </div>
+
+      <ul class="menu__option">
+        <li>
+          <a href="regular-menu.html" class="menu__option-list">regular menu</a>
+        </li>
+        <li>
+          <a href="beer-menu.html" class="menu__option-list">drinks/beer</a>
+        </li>
+        <li>
+          <a href="coffee-tea-menu.html" class="menu__option-list"
+            >coffee/tea</a
+          >
+        </li>
+        <li>
+          <a href="cocktails.html" class="menu__option-list">cocktails</a>
+        </li>
+        <li>
+          <a href="wines.html" class="menu__option-list menu__option-modify"
+            >wines</a
+          >
+        </li>
+      </ul>
+
       <aside>
         Chúng tôi muốn nói với bạn về ẩm thực với niềm đam mê, đó là lý do tại
         sao món ăn đơn giản, nhưng được chú trọng vào các sản phẩm tươi ngon

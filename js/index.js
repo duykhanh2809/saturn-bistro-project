@@ -20,12 +20,19 @@ const changeOutline = function (colorToConvert) {
 };
 
 // ACTIVE MENU BUTTON
+const imgLogoHeader = document.querySelectorAll(".header__img");
+const headerColor = document.querySelector(".header__nav");
+
 mainBtnOpen.addEventListener("click", () => {
+  imgLogoHeader.forEach((ele) => ele.classList.toggle("header__img-active"));
+  headerColor.classList.toggle("hidden");
   setMainNav();
   disableScroll();
 });
 
 mainBtnClose.addEventListener("click", () => {
+  imgLogoHeader.forEach((ele) => ele.classList.toggle("header__img-active"));
+  headerColor.classList.toggle("hidden");
   setMainNav();
   enableScroll();
 });
@@ -49,6 +56,8 @@ retroBtn.addEventListener("click", () => {
   heroOptions.forEach((ele) => {
     ele.style.setProperty("--source-default", "var(--source-yellow)");
   });
+
+  setStateSubPage("var(--color-primary)");
 });
 
 vintageBtn.addEventListener("click", () => {
@@ -67,6 +76,8 @@ vintageBtn.addEventListener("click", () => {
   heroOptions.forEach((ele) => {
     ele.style.setProperty("--source-default", "var(--source-pink)");
   });
+
+  setStateSubPage("var(--color-secondary)");
 });
 
 classicBtn.addEventListener("click", () => {
@@ -84,4 +95,6 @@ classicBtn.addEventListener("click", () => {
   heroOptions.forEach((ele) => {
     ele.style.setProperty("--source-default", "var(--source-ecru)");
   });
+
+  setStateSubPage("var(--color-tertiary)");
 });
