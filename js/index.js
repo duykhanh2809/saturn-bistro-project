@@ -37,13 +37,49 @@ mainBtnClose.addEventListener("click", () => {
   enableScroll();
 });
 
+// REVEAL SECTION
+const sectionReveal = document.querySelector(".section-describe");
+const sectionRevealFn = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(sectionRevealFn, {
+  root: null,
+  threshold: 0.075,
+});
+
+sectionObserver.observe(sectionReveal);
+sectionReveal.classList.add("section-hidden");
+
+// LAZY LOADING IMAGES
+const imageTargets = document.querySelectorAll("img[data-src]");
+const imageLazyLoad = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+  observer.unobserve(entry.target);
+};
+
+const imageObserver = new IntersectionObserver(imageLazyLoad, {
+  root: null,
+  threshold: 0.2,
+});
+
+imageTargets.forEach((ele) => {
+  imageObserver.observe(ele);
+});
+
 // CHANGE STATE ON HOMEPAGE
-
 const heroOptions = document.querySelectorAll(".hero__options-list");
-
 retroBtn.addEventListener("click", () => {
   setState("var(--color-primary)");
-  headerImg.src = "../img/logo/smile_yellow.png";
+  headerImg.src = "/img/logo/smile_yellow.png";
 
   // CHANGE STATE ACTIVE
   retroBtn.classList.add("header__color-retro-active");
@@ -62,7 +98,7 @@ retroBtn.addEventListener("click", () => {
 
 vintageBtn.addEventListener("click", () => {
   setState("var(--color-secondary)");
-  headerImg.src = "../img/logo/smile_pastel.png";
+  headerImg.src = "/img/logo/smile_pastel.png";
 
   // CHANGE STATE ACTIVE
   retroBtn.classList.remove("header__color-retro-active");
@@ -82,7 +118,7 @@ vintageBtn.addEventListener("click", () => {
 
 classicBtn.addEventListener("click", () => {
   setState("var(--color-tertiary)");
-  headerImg.src = "../img/logo/smile_whitepink.png";
+  headerImg.src = "/img/logo/smile_whitepink.png";
 
   // CHANGE STATE ACTIVE
   retroBtn.classList.remove("header__color-retro-active");

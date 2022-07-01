@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Saturn Bistro coded by Duy Khanh" />
     <link rel="icon" href="img/logo/smile_favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,7 +110,9 @@
           </div>
         </div>
         <div class="main__contact">
-          <p>+ 0123456789 (VN)</p>
+          <a href="tel:+0123456789" class="main__contact-link"
+            >+ 0123456789 (VN)</a
+          >
           <a
             href="mailto:khanh.nguyenduy@hcmut.edu.com"
             class="main__contact-link"
@@ -120,13 +123,11 @@
     </header>
     <main>
       <section class="section-hero">
-        <video
-          src="video\punkt_home.mp4"
-          type="video/mp4"
-          autoplay
-          loop
-          muted
-        ></video>
+        <video autoplay loop muted>
+          <source src="video/punkt_home.mp4" type="video/mp4" />
+          <source src="video/punkt_home.webm" type="video/webm" />
+          <source src="video/punkt_home.mov" type="video/mov" />
+        </video>
         <div class="container">
           <div class="hero__detail">
             <ul class="hero__options">
@@ -203,9 +204,10 @@
         <div class="container describe">
           <div class="describe__image-first">
             <img
-              src="img\homepage1.jpg"
+              src="img/homepage1-lazy.jpg"
+              data-src="img/homepage1.jpg"
               alt="intro image"
-              class="describe__img"
+              class="describe__img lazy-img"
             />
           </div>
           <div class="describe__text describe__text-first">
@@ -227,9 +229,10 @@
 
           <div class="describe__box">
             <img
-              src="img\homepage3.jpg"
+              src="img/homepage3-lazy.jpg"
+              data-src="img/homepage3.jpg"
               alt="intro image"
-              class="describe__img"
+              class="describe__img lazy-img"
             />
             <p class="describe__text">
               Chúng ta yêu thích những món ăn ngon, không chỉ mê hoặc bởi hương
@@ -239,9 +242,10 @@
           </div>
           <div class="describe__image-second">
             <img
-              src="img\homepage2.jpg"
+              src="img/homepage2-lazy.jpg"
+              data-src="img/homepage2.jpg"
               alt="intro image"
-              class="describe__img"
+              class="describe__img lazy-img"
             />
           </div>
           <div class="describe__text describe__text-third">
@@ -260,9 +264,10 @@
           </div>
           <div class="describe__image-third">
             <img
-              src="img\homepage4.jpg"
+              src="img/homepage4-lazy.jpg"
+              data-src="img/homepage4.jpg"
               alt="intro image"
-              class="describe__img"
+              class="describe__img lazy-img"
             />
           </div>
           <div class="describe__text describe__text-fifth">
@@ -340,7 +345,9 @@
         </div>
         <div class="footer__extra">
           <div class="footer__contact">
-            <p>+ 0123456789 (VN)</p>
+            <a href="tel:+0123456789" class="footer__contact-link"
+              >+ 0123456789(VN)</a
+            >
             <a
               href="mailto:khanh.nguyenduy@hcmut.edu.com"
               class="footer__contact-link"

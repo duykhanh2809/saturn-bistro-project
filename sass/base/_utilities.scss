@@ -12,6 +12,10 @@
   display: none !important;
 }
 
+.lazy-img {
+  filter: blur(20px);
+}
+
 .copyright {
   align-self: flex-end;
   font-size: 2.4rem;

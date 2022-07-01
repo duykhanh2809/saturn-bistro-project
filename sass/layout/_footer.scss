@@ -35,6 +35,7 @@
 
       @media only screen and (max-width: $bp-small) {
         font-size: 2.6rem;
+        font-weight: 400;
       }
     }
     &:hover,
@@ -85,8 +86,8 @@
     font-size: 1.2rem;
     font-weight: 600;
     @media only screen and (max-width: $bp-small) {
-      font-size: 1.8rem;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-weight: 400;
     }
   }
 
