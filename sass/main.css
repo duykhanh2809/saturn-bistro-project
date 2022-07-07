@@ -784,11 +784,6 @@ h4 {
   display: none !important;
 }
 
-.lazy-img {
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
-}
-
 .copyright {
   -ms-flex-item-align: end;
       align-self: flex-end;

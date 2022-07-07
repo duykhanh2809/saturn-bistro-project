@@ -1019,6 +1019,7 @@ h4 {
 
 .reservation .heading__direct {
   grid-column: 1 / -1;
+  font-size: 1.6rem;
 }
 
 .menu {
@@ -1421,14 +1422,14 @@ aside {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
     row-gap: 10rem;
-    padding: 25rem 15rem 5rem;
+    padding: 15rem;
   }
 }
 
 @media only screen and (max-width: 34.375em) {
   .main__nav {
     row-gap: 6rem;
-    padding: 15rem 3rem 5rem;
+    padding: 10rem 3rem 8rem;
   }
 }
 
@@ -1730,6 +1731,7 @@ aside {
 @media only screen and (max-width: 34.375em) {
   .footer__nav-list:link, .footer__nav-list:visited {
     font-size: 2.6rem;
+    font-weight: 400;
   }
 }
 
@@ -1777,8 +1779,8 @@ aside {
 
 @media only screen and (max-width: 34.375em) {
   .footer__time div {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 400;
   }
 }
 
@@ -2030,7 +2032,7 @@ aside {
     width: 100%;
     padding: 2rem 3rem;
     font-size: 1.9rem;
-    font-weight: 600;
+    font-weight: 300;
     line-height: 1.1;
     position: absolute;
     top: 50%;
@@ -2096,7 +2098,10 @@ aside {
 
 .section-describe {
   color: #111;
+  opacity: 1;
   margin-bottom: 9.6rem;
+  transition: all 1.5s;
+  transform: translateY(0);
 }
 
 @media only screen and (max-width: 46.875em) {
@@ -2251,6 +2256,11 @@ aside {
   -ms-grid-column-align: start;
   grid-row: span 2;
   justify-self: start;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 /*# sourceMappingURL=index.b458fa94.css.map */

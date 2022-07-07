@@ -55,25 +55,25 @@ sectionObserver.observe(sectionReveal);
 sectionReveal.classList.add("section-hidden");
 
 // LAZY LOADING IMAGES
-const imageTargets = document.querySelectorAll("img[data-src]");
-const imageLazyLoad = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  entry.target.src = entry.target.dataset.src;
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("lazy-img");
-  });
-  observer.unobserve(entry.target);
-};
+// const imageTargets = document.querySelectorAll("img[data-src]");
+// const imageLazyLoad = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) return;
+//   entry.target.src = entry.target.dataset.src;
+//   entry.target.addEventListener("load", function () {
+//     entry.target.classList.remove("lazy-img");
+//   });
+//   observer.unobserve(entry.target);
+// };
 
-const imageObserver = new IntersectionObserver(imageLazyLoad, {
-  root: null,
-  threshold: 0.2,
-});
+// const imageObserver = new IntersectionObserver(imageLazyLoad, {
+//   root: null,
+//   threshold: 0,
+// });
 
-imageTargets.forEach((ele) => {
-  imageObserver.observe(ele);
-});
+// imageTargets.forEach((ele) => {
+//   imageObserver.observe(ele);
+// });
 
 // CHANGE STATE ON HOMEPAGE
 const heroOptions = document.querySelectorAll(".hero__options-list");
