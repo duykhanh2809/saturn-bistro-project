@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("Bumbaya");
 // ACCORDION
 const questionAll = document.querySelectorAll(".faq__question");
 const answerAll = Array.from(document.querySelectorAll(".faq__answer"));
