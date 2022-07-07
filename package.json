@@ -2,7 +2,7 @@
   "name": "project_plus_saturnbistro",
   "version": "1.0.0",
   "description": "Project 01 - NDK",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
     "start": "live-server",
     "build": "parcel build index.html --dist-dir ./dist"
