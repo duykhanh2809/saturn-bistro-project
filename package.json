@@ -2,10 +2,10 @@
   "name": "project_plus_saturnbistro",
   "version": "1.0.0",
   "description": "Project 01 - NDK",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server"
+    "start": "live-server",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
